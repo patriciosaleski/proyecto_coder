@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uñika</title>
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body class="grid">
+  <header>
+    <nav class="navbar flex-row container">
+      <div class="navbar__logo">
+        <a href="./index.html"><img src="./assets/img/icon/logo.png" alt="Logo de Uñika" /></a>
+      </div>
+      <ul class="navbar__menu flex-row">
+        <li class="menu__item"><a class="menu__link" href="./assets/pages/store.html">Tienda</a></li>
+        <li class="menu__item"><a class="menu__link" href="./assets/pages/about.html">Nosotros</a></li>
+        <li class="menu__item"><a class="menu__link" href="./assets/pages/contact-us.html">Contacto</a></li>
+        <!-- no se incluye cart.html -->
+        <li class="menu__item"><a class="menu__link" id="cart" href="./assets/pages/cart.html">
+            <img src="./assets/img/icon/cart.png" /> Mi Carro</a>
+        </li>
+        <li class="menu__item">
+          <a href="" id="hamburger__icon" class="flex-row"><img src="./assets/img/icon/hamburger.png"
+              alt="Hamburger icon"></a>
+          <ul class="sub-menu">
+            <li class="sub-menu__item">
+              <a href="./assets/pages/store.html" class="sub-menu__link flex-column">Tienda</a>
+            </li>
+            <li class="sub-menu__item">
+              <a href="./assets/pages/about.html" class="sub-menu__link flex-column">Nosotros</a>
+            </li>
+            <li class="sub-menu__item">
+              <a href="./assets/pages/contact-us.html" class="sub-menu__link flex-column">Contacto</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="product__main flex-row">
+    <div class="product__video">
+      <video src="./assets/img/product__images/main-video.mp4" autoplay muted loop></video>
+    </div>
+    <div class="product__info flex-column">
+      <h1>Transforma su mundo</h1>
+      <p>
+        Magníficas carpitas estilo Tepee, ideales para hacer que su
+        ambiente sea aún mas divertido y decorativo Junto a sus bolsillos
+        jugueteros, ventanas y una gran alfombra para no parar de jugar.
+      </p>
+      <button type="button">
+        <a href="./assets/pages/store.html">Comprar Ahora</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="product__description flex-row">
+    <div class="product__customization">
+      <h3>Personalizá a tu gusto</h3>
+      <h2>Distintos tamaños, distintos estilos.</h2>
+    </div>
+    <div class="product__discover">
+      <p>
+        Elegí entre los distintos tamaños para saber cuál se adapta más al
+        ambiente.
+      </p>
+      <a href="./assets/pages/store.html">
+        <img src="./assets/img/icon/arrow-right-long.png" alt="arrow" />Descubrí un nuevo mundo</a>
+    </div>
+  </div>
+
+  <div class="product__features">
+    <div class="product__feature">
+      <hr />
+      <p>Bolsillo juguetero</p>
+      <picture>
+        <source media="(max-width: 480px)" srcset="./assets/img/product__images/bolsillo.jpg 480w">
+        <source media="(max-width: 600px)" srcset="./assets/img/product__images/bolsillo.jpg 800w">
+        <source media="(max-width: 1023px)" srcset="./assets/img/product__images/bolsillo.jpg 1000w">
+        <source media="(max-width: 1399px)" srcset="./assets/img/product__images/bolsillo.jpg 1400w">
+        <source media="(min-width: 1400px)" srcset="./assets/img/product__images/bolsillo.jpg">
+        <img src="./assets/img/product__images/bolsillo.jpg" alt="">
+      </picture>
+    </div>
+    <div class="product__feature">
+      <hr />
+      <p>Una gran vista</p>
+      <picture>
+        <source media="(max-width: 480px)" srcset="./assets/img/product__images/view.jpg 480w">
+        <source media="(max-width: 600px)" srcset="./assets/img/product__images/view.jpg 800w">
+        <source media="(max-width: 1023px)" srcset="./assets/img/product__images/view.jpg 1000w">
+        <source media="(max-width: 1399px)" srcset="./assets/img/product__images/view.jpg 1400w">
+        <source media="(min-width: 1400px)" srcset="./assets/img/product__images/view.jpg">
+        <img src="./assets/img/product__images/view.jpg" alt="">
+      </picture>
+    </div>
+    <div class="product__feature">
+      <hr />
+      <p>Súper cómoda</p>
+      <picture>
+        <source media="(max-width: 480px)" srcset="./assets/img/product__images/comfort.jpg 480w">
+        <source media="(max-width: 600px)" srcset="./assets/img/product__images/comfort.jpg 800w">
+        <source media="(max-width: 1023px)" srcset="./assets/img/product__images/comfort.jpg 1000w">
+        <source media="(max-width: 1399px)" srcset="./assets/img/product__images/comfort.jpg 1400w">
+        <source media="(min-width: 1400px)" srcset="./assets/img/product__images/comfort.jpg">
+        <img src="./assets/img/product__images/comfort.jpg" alt="">
+      </picture>
+    </div>
+    <div class="product__feature">
+      <hr />
+      <p>Gran resistencia</p>
+      <picture>
+        <source media="(max-width: 480px)" srcset="./assets/img/product__images/structure.jpg 480w">
+        <source media="(max-width: 600px)" srcset="./assets/img/product__images/structure.jpg 800w">
+        <source media="(max-width: 1023px)" srcset="./assets/img/product__images/structure.jpg 1000w">
+        <source media="(max-width: 1399px)" srcset="./assets/img/product__images/structure.jpg 1400w">
+        <source media="(min-width: 1400px)" srcset="./assets/img/product__images/structure.jpg">
+        <img src="./assets/img/product__images/structure.jpg" alt="">
+      </picture>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer flex-row">
+      <div class="faq__links">
+        <a href="./assets/pages/about.html">¿Quienes somos?</a>
+        <a href="./assets/pages/faq.html">Preguntas Frecuentes</a>
+      </div>
+      <div class="socialMedia__links">
+        <a href="https://www.instagram.com/unikaabrigos" target="_blank"><img src="./assets/img/icon/ig-logo.png"
+            alt="Instagram" /></a>
+        <a href="https://www.facebook.com/unikaabrigos" target="_blank"><img src="./assets/img/icon/fb-logo.png"
+            alt="Facebook" /></a>
+        <a href="https://www.whatsapp.com/" target="_blank"><img src="./assets/img/icon/wa-logo.png"
+            alt="WhatsApp" /></a>
+      </div>
+      <div class="copyright">
+        <p>© Uñika 2022</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

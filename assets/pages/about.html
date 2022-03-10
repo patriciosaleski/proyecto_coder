@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uñika | Nosotros</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+
+<body class="flex-column">
+    <header>
+        <nav class="navbar flex-row container">
+            <div class="navbar__logo">
+                <a href="../../index.html"><img src="../img/icon/logo.png" alt="Logo de Uñika" /></a>
+            </div>
+            <ul class="navbar__menu flex-row">
+                <li class="menu__item"><a class="menu__link" href="./store.html">Tienda</a></li>
+                <li id="active" class="menu__item"><a class="menu__link" href="./about.html">Nosotros</a></li>
+                <li class="menu__item"><a class="menu__link" href="./contact-us.html">Contacto</a></li>
+                <!-- no se incluye cart.html -->
+                <li class="menu__item"><a class="menu__link" id="cart" href="./cart.html">
+                        <img src="../img/icon/cart.png" /> Mi Carro</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" id="hamburger__icon" class="flex-row"><img src="../img/icon/hamburger.png"
+                            alt="Hamburger icon"></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu__item">
+                            <a href="./assets/pages/store.html" class="sub-menu__link flex-column">Tienda</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="./assets/pages/about.html" class="sub-menu__link flex-column">Nosotros</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="./assets/pages/contact-us.html" class="sub-menu__link flex-column">Contacto</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about flex-column">
+            <h1>Conocenos</h1>
+            <p>
+                Uñika es un emprendimiento que comencé en el año 2012 con trabajos camperas para bajas temperaturas,
+                ofreciendo una calidad superior gracias a la mano de obra artesanal que le dedico,
+                junto con un precio competente y la opción de elegir el diseño de las mismas hizo que mi emprendimiento
+                sea un éxito hasta el presente.
+                <br>
+                <br>
+                Con la pandemia del COVID-19, y viendo una nueva oportunidad en el mercado, decidí hacer un cambio en el
+                rumbo del emprendimiento,
+                esta vez ofreciendo carpas de estilo Tepee, también conocidas como Tipi, con el objetivo de estimular el
+                juego de los niños en contacto
+                con la naturaleza, asimismo generar un espacio de juego dentro de sus hogares.
+                <br>
+                <br>
+                Con esas ideas en mente, y mi gran pasión por el espíritu infantil, diseñe dichas carpas,
+                ofreciendo lo que hizo que el emprendimiento sea un éxito: la opción de elegir el diseño,
+                obtener una excelente calidad del producto y a un precio accesible.
+                <br>
+                <br>
+                Agradezco a todos los clientes que han confiado en mí, gracias a ellos he logrado mejorar muchísimos
+                aspectos,
+                tanto para el producto como la atención brindada, ofreciendo espacios de juego y relax a niños con
+                diferentes capacidades,
+                siempre dando el amor y cariño que todo infante se merece.
+            </p>
+        </div>
+    </main>
+
+    <div class="site__img">
+        <picture>
+            <source media="(max-width: 480px)" srcset="../img/product__images/base.jpg 1100w">
+            <source media="(max-width: 600px)" srcset="../img/product__images/base.jpg 1100w">
+            <source media="(max-width: 1023px)" srcset="../img/product__images/base.jpg 1200w">
+            <source media="(max-width: 1399px)" srcset="../img/product__images/base.jpg 1400w">
+            <source media="(min-width: 1400px)" srcset="../img/product__images/base.jpg">
+            <img src="../img/product__images/base.jpg" alt="Emprendimiento">
+        </picture>
+    </div>
+
+    <footer>
+        <div class="footer flex-row">
+            <div class="faq__links">
+                <a href="./about.html">¿Quienes somos?</a>
+                <a href="./faq.html">Preguntas Frecuentes</a>
+            </div>
+            <div class="socialMedia__links">
+                <a href="https://www.instagram.com/unikaabrigos" target="_blank"><img src="../img/icon/ig-logo.png"
+                        alt="Instagram" /></a>
+                <a href="https://www.facebook.com/unikaabrigos" target="_blank"><img src="../img/icon/fb-logo.png"
+                        alt="Facebook" /></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><img src="../img/icon/wa-logo.png"
+                        alt="WhatsApp" /></a>
+            </div>
+            <div class="copyright">
+                <p>© Uñika 2022</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
