@@ -704,6 +704,12 @@ body .product button img {
     height: 1.3vw;
 }
 
+body .product button:hover {
+    background-color: var(--secondary);
+    border: var(--tertiary) 0.2rem solid;
+    transition: background-color .3s ease-in-out, border .3s ease-in-out;
+}
+
 @media screen and (max-width: 1023px) {
     body .store__main h1 {
         font-size: 9vw;
