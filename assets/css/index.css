@@ -595,15 +595,42 @@ body .product__features {
     margin-bottom: 17vh;
 }
 
-body .product__features p {
+body .product__feature p {
     font-size: 2vw;
     font-weight: var(--semi);
     margin-bottom: 2rem;
     margin-left: 0.5rem;
 }
 
-body .product__feature {
+/* body .product__feature {
     background-color: rgba(0,0,0,0.03);
+} */
+
+
+body div.accordion-item {
+    width: 100%;
+}
+
+body div.accordion-item h2 button {
+    font-size: 0.8em;
+    background-color: var(--primary);
+}
+
+body div.accordion-item .accordion-body p {
+    font-family: var(--font-primary);
+    font-size: 1.4em;
+    font-weight: var(--light);
+    width: 278px;
+    margin: 0;
+}
+
+body .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: var(--tertiary);
+}
+
+body .accordion-item:last-of-type .accordion-collapse {
+    background-color: var(--primary);
 }
 
 @media screen and (min-width: 1400px) {
@@ -1153,6 +1180,11 @@ body .support__button--content p {
     font-size: 1.2em;
     letter-spacing: -0.03em;
     font-weight: var(--thin)
+}
+
+body div.support__link div.support__button button:hover {
+    background-color: var(--tertiary);
+    transition: background-color .4s ease-in-out;
 }
 
 @media screen and (max-width: 1400px) {
