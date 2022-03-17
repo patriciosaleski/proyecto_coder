@@ -685,14 +685,18 @@ body .store__main h1 strong {
     font-weight: var(--light);
 }
 
-body .store__video video {
-    border: var(--secondary) 0.2rem solid;
-    border-radius: 3rem;
-    width: fit-content;
+body .store__main .carousel img {
+    border-radius: 4rem;
 }
 
+body .store__main .carousel-control-prev-icon, .carousel-control-next-icon {
+    padding: 2rem;
+    background-color: black;
+    border-radius: 2rem;
+}
 
 /* comienzo de propiedades para store__products */
+
 
 body .store__products {
     grid-column: 2 / 4;
@@ -788,12 +792,6 @@ body .product button:hover {
         height: 2vw;
     }
 } 
-
-@media screen and (max-width: 768px) {
-    body .store__video video {
-        width: 80vw;
-    }
-}
 
 @media screen and (max-width: 600px) {
     body .store__main h1 {

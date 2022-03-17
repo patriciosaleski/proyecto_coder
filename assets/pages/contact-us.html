@@ -52,15 +52,15 @@
         <div class="contact__form">
             <form class="flex-column">
                 <label for="name">Nombre</label>
-                <input type="text" name="name" pattern="[A-Za-z]+"
+                <input class="form-control-lg" type="text" name="name" pattern="[A-Za-z]+"
                     oninvalid="setCustomValidity('Ingrese solamente caracteres alfabéticos')"
                     placeholder="Ingrese su nombre" required>
                 <br>
                 <label for="email">Correo</label>
-                <input type="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                <input class="form-control-lg" type="email" name="email" placeholder="Ingrese su correo electrónico" required>
                 <br>
                 <label for="subject">Consulta</label>
-                <input type="text" name="subject" placeholder="Ingrese el motivo de su consulta" required>
+                <input class="form-control-lg" type="text" name="subject" placeholder="Ingrese el motivo de su consulta" required>
                 <br>
                 <label for="explanation">Descripción</label>
                 <textarea name="explanation" maxlength="200" cols="20" rows="4" required></textarea>
