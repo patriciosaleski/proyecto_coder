@@ -639,17 +639,56 @@ body .accordion-item:last-of-type .accordion-collapse {
     }
 }
 
+/* media query temporal para acomodar bootstrap */
+
+@media screen and (max-width: 1400px) {
+    body div.accordion-item .accordion-body p {
+        font-size: 1vw;
+        width: 20vw;
+    }
+
+    body div.accordion-item h2 button {
+        font-size: 1.3vw;
+    }
+
+    body div.accordion-body {
+        padding-right: 0;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     body .product__features {
         grid-template-columns: repeat(2, 1fr);
         gap: 5vw;
         margin: 6vh auto;
     }
+
+    body div.accordion-item .accordion-body p {
+        font-size: 1.6vw;
+        width: 25vw;
+    }
+
+    body div.accordion-item h2 button {
+        font-size: 1.8vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
     body .product__features p {
         font-size: 3vw;
+    }
+}
+
+/* media query temporal para acomodar bootstrap */
+
+@media screen and (max-width: 600px) {
+    body div.accordion-item .accordion-body p {
+        font-size: 2vw;
+        width: 35vw;
+    }
+
+    body div.accordion-item h2 button {
+        font-size: 2.4vw;
     }
 }
 
@@ -661,6 +700,15 @@ body .accordion-item:last-of-type .accordion-collapse {
 
     body .product__features p {
         font-size: 5vw;
+    }
+
+    body div.accordion-item .accordion-body p {
+        font-size: 3vw;
+        width: 60vw;
+    }
+
+    body div.accordion-item h2 button {
+        font-size: 4vw;
     }
 }
 
