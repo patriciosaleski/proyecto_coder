@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400;500&display=swap');
 
 :root {
     --primary: #F2F0D0;
@@ -6,6 +7,7 @@
     --tertiary: #F2D335;
     --black: #000;
     --font-primary: 'Roboto', sans-serif;
+    --robotoMono : 'Roboto Mono', sans-serif;
     /* font-weight shortcuts */
     --thin: 100;
     --light: 300;
@@ -25,7 +27,7 @@
 /* Globals */
 
 html {
-    font-family: var(--font-primary);
+    font-family: var(--font-primary)!important;
     font-size: 62.5%; /* 1em = 10px */
     height: 100%;
     min-height: 100%;
@@ -61,6 +63,15 @@ hr {
 
 body {
     min-height: 100vh;
+}
+
+/* evitar cambios de bootstrap */
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 /* Helpers */
@@ -104,6 +115,7 @@ header .navbar {
 
 header .navbar__menu {
     align-items: center;
+    margin-top: 1rem;
 }
 
 header .menu__item {
@@ -194,7 +206,6 @@ header .menu__link img {
     #cart {
         padding: 0.5rem 1rem;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -237,6 +248,7 @@ footer .footer {
 footer .socialMedia__links {
     flex-basis: 30%;
 }
+
 
 footer .socialMedia__links img {
     width: 32px;
@@ -283,10 +295,10 @@ footer .socialMedia__links img {
 
 @media screen and (max-width: 600px) {
     footer .footer {
-        min-height: 10vh;
-        display: flex;
-        flex-flow: column-reverse;
-        font-size: 1.6em;
+        min-height: 10vh!important;
+        display: flex!important;
+        flex-flow: column-reverse!important;
+        font-size: 1.6em!important;
     }
 
     footer .socialMedia__links {
@@ -399,16 +411,16 @@ body .product__info button {
 
 @media screen and (max-width: 768px) {
     body .product__main {
-        flex-direction: column;
+        flex-direction: column!important;
     }
 
     body .product__video video {
-        margin: 0;
+        margin: 0!important;
     }
 
     body .product__video {
-        width: 90%;
-        margin-bottom: 5vh;
+        width: 90%!important;
+        margin-bottom: 5vh!important;
     }
 
     body .product__info h1 {
@@ -501,7 +513,7 @@ body .product__discover a:hover {
     }
 
     body .product__discover a {
-        width: 330px;
+        width: 335px;
         margin-top: 1rem;
     }
 
@@ -636,6 +648,7 @@ body .store__main {
 }
 
 body .store__main h1 {
+    font-family: var(--font-primary);
     font-size: 7vw;
     font-weight: var(--thin);
     margin-bottom: 3vh;
@@ -738,8 +751,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 15vw;
-        height: 3.3vh;
+        width: 15vw!important;
+        height: 3.3vh!important;
         font-size: 2.2vw;
     }
 
@@ -782,8 +795,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 25vw;
-        height: 3.4vh;
+        width: 25vw!important;
+        height: 3.4vh!important;
         font-size: 3.5vw;
     }
 
@@ -1045,5 +1058,136 @@ body .faq__link a:hover {
         width: 2.4rem;
         height: 2.4rem;
         margin: 0 1.7vw 0 1.7vw;
+    }
+}
+
+/* -------------- comienzo de propiedades para faq.html -------------- */
+/* comienzo de propiedades para faq */
+
+body main.faq li {
+    list-style-image: url(../img/icon/dot.png);
+    margin-bottom: 5rem;
+}
+
+body .faq__title h1 {
+    font-family: var(--font-primary);
+    font-size: 6vw;
+    font-weight: var(--thin);
+    margin: 6rem 0;
+    text-align: center;
+}
+
+body main.faq ul li h2 {
+    font-size: 2.4em;
+    letter-spacing: -0.04em;
+    font-family: var(--robotoMono);
+    margin-bottom: 0.5rem;
+}
+
+body main.faq ul li p {
+    font-family: var(--font-primary);
+    font-size: 1.8em;
+    font-weight: var(--light);
+    padding-left: 3rem;
+    width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+    body div.faq__title h1 {
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body main.faq ul li p {
+        font-size: 1.4em;
+    }
+
+    body main.faq ul li h2 {
+        font-size: 2em;
+    }
+
+
+}
+
+/* comienzo de propiedades para support__link y support__button */
+
+
+body .support__link h2 {
+    font-family: var(--robotoMono);
+    font-size: 3em;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+}
+
+body .support__button button {
+    background-color: var(--primary);
+    border: var(--secondary) 0.2rem solid;
+    border-radius: 2rem;
+}
+
+body .support__button button img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+body .support__button--content {
+    align-items: center;
+    padding: 2rem 2.5rem;
+    font-family: var(--font-primary);
+    text-align: left;
+}
+
+body .support__button--content h3, p {
+    margin: auto 0;
+}
+
+body .support__button--content h3 {
+    font-size: 2.4em;
+    letter-spacing: -0.04em;
+    font-weight: var(--light);
+}
+
+body .support__button--content p {
+    font-size: 1.2em;
+    letter-spacing: -0.03em;
+    font-weight: var(--thin)
+}
+
+@media screen and (max-width: 1400px) {
+    body .support__link {
+        margin-bottom: 7rem;
+    }
+    
+    body main.faq {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    body div.container-lg {
+        margin: 0 3rem;
+    }
+
+    body div.support__button, div.support__link h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body div.container-lg {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body .support__button--content {
+        padding: 1.5rem;
+    }
+
+    body div.support__link .support__button h3 {
+        font-size: 1.8em;
     }
 }
