@@ -27,7 +27,7 @@
 /* Globals */
 
 html {
-    font-family: var(--font-primary)!important;
+    font-family: var(--font-primary);
     font-size: 62.5%; /* 1em = 10px */
     height: 100%;
     min-height: 100%;
@@ -65,14 +65,6 @@ body {
     min-height: 100vh;
 }
 
-/* evitar cambios de bootstrap */
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
-    line-height: 1.2;
-}
 
 /* Helpers */
 
@@ -115,7 +107,6 @@ header .navbar {
 
 header .navbar__menu {
     align-items: center;
-    margin-top: 1rem;
 }
 
 header .menu__item {
@@ -295,10 +286,10 @@ footer .socialMedia__links img {
 
 @media screen and (max-width: 600px) {
     footer .footer {
-        min-height: 10vh!important;
-        display: flex!important;
-        flex-flow: column-reverse!important;
-        font-size: 1.6em!important;
+        min-height: 10vh;
+        display: flex;
+        flex-flow: column-reverse;
+        font-size: 1.6em;
     }
 
     footer .socialMedia__links {
@@ -411,16 +402,16 @@ body .product__info button {
 
 @media screen and (max-width: 768px) {
     body .product__main {
-        flex-direction: column!important;
+        flex-direction: column;
     }
 
     body .product__video video {
-        margin: 0!important;
+        margin: 0;
     }
 
     body .product__video {
-        width: 90%!important;
-        margin-bottom: 5vh!important;
+        width: 90%;
+        margin-bottom: 5vh;
     }
 
     body .product__info h1 {
@@ -602,35 +593,8 @@ body .product__feature p {
     margin-left: 0.5rem;
 }
 
-/* body .product__feature {
+body .product__feature {
     background-color: rgba(0,0,0,0.03);
-} */
-
-
-body div.accordion-item {
-    width: 100%;
-}
-
-body div.accordion-item h2 button {
-    font-size: 0.8em;
-    background-color: var(--primary);
-}
-
-body div.accordion-item .accordion-body p {
-    font-family: var(--font-primary);
-    font-size: 1.4em;
-    font-weight: var(--light);
-    width: 278px;
-    margin: 0;
-}
-
-body .accordion-button:not(.collapsed) {
-    color: black;
-    background-color: var(--tertiary);
-}
-
-body .accordion-item:last-of-type .accordion-collapse {
-    background-color: var(--primary);
 }
 
 @media screen and (min-width: 1400px) {
@@ -685,14 +649,10 @@ body .store__main h1 strong {
     font-weight: var(--light);
 }
 
-body .store__main .carousel img {
-    border-radius: 4rem;
-}
-
-body .store__main .carousel-control-prev-icon, .carousel-control-next-icon {
-    padding: 2rem;
-    background-color: black;
-    border-radius: 2rem;
+body .store__video video {
+    border: var(--secondary) 0.2rem solid;
+    border-radius: 3rem;
+    width: fit-content;
 }
 
 /* comienzo de propiedades para store__products */
@@ -782,8 +742,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 15vw!important;
-        height: 3.3vh!important;
+        width: 15vw;
+        height: 3.3vh;
         font-size: 2.2vw;
     }
 
@@ -791,7 +751,13 @@ body .product button:hover {
         width: 2vw;
         height: 2vw;
     }
-} 
+}
+
+@media screen and (max-width: 768px) {
+    body .store__video video {
+        width: 80vw;
+    }
+}
 
 @media screen and (max-width: 600px) {
     body .store__main h1 {
@@ -820,8 +786,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 25vw!important;
-        height: 3.4vh!important;
+        width: 25vw;
+        height: 3.4vh;
         font-size: 3.5vw;
     }
 
@@ -957,8 +923,6 @@ body .contact__form button:hover {
     color: #000000;
 }
 
-
-
 @media screen and (max-width: 1023px) {
     body .contact__form input, label {
         font-size: 1.8vw;
@@ -1089,7 +1053,7 @@ body .faq__link a:hover {
 /* -------------- comienzo de propiedades para faq.html -------------- */
 /* comienzo de propiedades para faq */
 
-body main.faq li {
+body main.faq .faq__list li {
     list-style-image: url(../img/icon/dot.png);
     margin-bottom: 5rem;
 }
@@ -1132,11 +1096,10 @@ body main.faq ul li p {
         font-size: 2em;
     }
 
-
 }
 
-/* comienzo de propiedades para support__link y support__button */
 
+/* comienzo de propiedades para support__link y support__button */
 
 body .support__link h2 {
     font-family: var(--robotoMono);
@@ -1196,19 +1159,9 @@ body div.support__link div.support__button button:hover {
 }
 
 @media screen and (max-width: 991px) {
-    body div.container-lg {
-        margin: 0 3rem;
-    }
-
     body div.support__button, div.support__link h2 {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body div.container-lg {
-        margin-left: 1rem;
     }
 }
 
