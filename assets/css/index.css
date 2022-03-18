@@ -27,7 +27,7 @@
 /* Globals */
 
 html {
-    font-family: var(--font-primary)!important;
+    font-family: var(--font-primary);
     font-size: 62.5%; /* 1em = 10px */
     height: 100%;
     min-height: 100%;
@@ -65,14 +65,6 @@ body {
     min-height: 100vh;
 }
 
-/* evitar cambios de bootstrap */
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
-    line-height: 1.2;
-}
 
 /* Helpers */
 
@@ -115,7 +107,6 @@ header .navbar {
 
 header .navbar__menu {
     align-items: center;
-    margin-top: 1rem;
 }
 
 header .menu__item {
@@ -249,7 +240,6 @@ footer .socialMedia__links {
     flex-basis: 30%;
 }
 
-
 footer .socialMedia__links img {
     width: 32px;
     height: 32px;
@@ -295,10 +285,10 @@ footer .socialMedia__links img {
 
 @media screen and (max-width: 600px) {
     footer .footer {
-        min-height: 10vh!important;
-        display: flex!important;
-        flex-flow: column-reverse!important;
-        font-size: 1.6em!important;
+        min-height: 10vh;
+        display: flex;
+        flex-flow: column-reverse;
+        font-size: 1.6em;
     }
 
     footer .socialMedia__links {
@@ -411,16 +401,16 @@ body .product__info button {
 
 @media screen and (max-width: 768px) {
     body .product__main {
-        flex-direction: column!important;
+        flex-direction: column;
     }
 
     body .product__video video {
-        margin: 0!important;
+        margin: 0;
     }
 
     body .product__video {
-        width: 90%!important;
-        margin-bottom: 5vh!important;
+        width: 90%;
+        margin-bottom: 5vh;
     }
 
     body .product__info h1 {
@@ -751,8 +741,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 15vw!important;
-        height: 3.3vh!important;
+        width: 15vw;
+        height: 3.3vh;
         font-size: 2.2vw;
     }
 
@@ -795,8 +785,8 @@ body .product button:hover {
     }
 
     body .product button {
-        width: 25vw!important;
-        height: 3.4vh!important;
+        width: 25vw;
+        height: 3.4vh;
         font-size: 3.5vw;
     }
 
@@ -1106,8 +1096,6 @@ body main.faq ul li p {
     body main.faq ul li h2 {
         font-size: 2em;
     }
-
-
 }
 
 /* comienzo de propiedades para support__link y support__button */
@@ -1153,6 +1141,11 @@ body .support__button--content p {
     font-size: 1.2em;
     letter-spacing: -0.03em;
     font-weight: var(--thin)
+}
+
+body div.support__link div.support__button button:hover {
+    background-color: var(--tertiary);
+    transition: background-color .4s ease-in-out;
 }
 
 @media screen and (max-width: 1400px) {
