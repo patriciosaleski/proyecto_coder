@@ -1,0 +1,284 @@
+// Comienzo de propiedades para faq.html
+// faq
+
+body {
+    .faq {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        align-items: center;
+
+        &__title {
+            h1 {
+                font-family: $font-primary;
+                font-size: 5.8vw;
+                font-weight: $thin;
+                margin: 4rem 0;
+                text-align: center;
+            }
+        }
+        
+        &__list {
+            width: 50vw;
+            height: 47vh;
+            overflow-y: scroll;
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+            margin: 5vh 0 10vh 0;
+            
+            ul {
+                margin-left: 2.13vw;
+
+                li {
+                    list-style-image: url(../img/icon/dot.png);
+                    margin-bottom: 5rem;
+
+                    h2 {
+                        font-size: 2.4em;
+                        letter-spacing: -0.04em;
+                        font-family: $robotoMono;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        font-family: $font-primary;
+                        font-size: 1.8em;
+                        font-weight: $light;
+                        padding-left: 3rem;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        .faq {
+            &__title {
+                h1 {
+                    font-size: 5.4vw;
+                }
+            }
+
+            &__list {
+                width: 35vw;
+
+                ul {
+                    margin-left: 2.9vw;
+
+                    li {
+                        h2 {
+                            font-size: 2em;
+                        }
+
+                        p {
+                            font-size: 1.6em;
+                            padding-left: 1rem;
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .faq {
+            grid-column: 1 / 5;
+
+            &__title {
+                h1 {
+                    font-size: 10vw;
+                }
+            }
+
+            &__list {
+                width: 80vw;
+
+                ul {
+                    margin-left: 4vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        .faq {
+            &__list {
+                width: 90vw;
+
+                ul {
+                    margin-left: 5vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        .faq {
+            &__list {
+                ul {
+                    margin-left: 8vw;
+
+                    li {
+                        p {
+                            padding-left: 1rem;
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// support__link y support__button
+
+body .support {
+    &__link {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+        display: inherit;
+        justify-content: end;
+
+        h2 {
+            font-family: $robotoMono;
+            font-size: 3em;
+            letter-spacing: -0.04em;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__button {
+        button {
+            background-color: $primary;
+            border: $secondary 0.2rem solid;
+            border-radius: 2rem;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+                margin-right: 2rem;
+            }
+
+            &:hover {
+                background-color: $tertiary;
+                transition: background-color .4s ease-in-out;
+            }
+        }
+
+        &--content {
+            align-items: center;
+            padding: 2rem 2.5rem;
+            font-family: $font-primary;
+            text-align: left;
+
+            h3, p {
+                margin: auto 0;
+            }
+
+            h3 {
+                font-size: 2em;
+                letter-spacing: -0.04em;
+                font-weight: $light;
+            }
+
+            p {
+                font-size: 1.2em;
+                letter-spacing: -0.03em;
+                font-weight: $thin;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body .support {
+        &__link {
+            h2 {
+                font-size: 2.7vw;
+            }
+        }
+
+        &__button {
+            button {
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                    margin-right: 1.4rem;
+                }
+            }
+                &--content {
+                    padding: 1vh 2vw;
+
+                    h3 {
+                        font-size: 2.5vw;
+                    }
+
+                    p {
+                        font-size: 1.4vw;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body .support {
+        &__link {
+            grid-column: 1 / 5;
+            grid-row: 4 / 5;
+            justify-content: center;
+            margin-bottom: 5vh;
+
+            h2 {
+                font-size: 4vw;
+            }
+        }
+
+        &__button {
+            button {
+                img {
+                    width: 7vw;
+                    height: 7vw;
+                    margin-right: 2rem;
+                }
+            }
+                &--content {
+                    padding: 1.6vh 3vw;
+
+                    h3 {
+                        font-size: 3.5vw;
+                    }
+
+                    p {
+                        font-size: 2vw;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body .support {
+        &__button {
+            &--content {
+                h3 {
+                    font-size: 3.6vw;
+                }
+
+                p {
+                    font-size: 2.4vw;
+                }
+            }
+        }
+    }
+}

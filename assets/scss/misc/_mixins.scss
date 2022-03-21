@@ -1,0 +1,40 @@
+// Helpers
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Animations */
+
+.expandir-texto {
+	animation: expandir-texto 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+@keyframes expandir-texto {
+    0% {
+        letter-spacing: -0.6em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

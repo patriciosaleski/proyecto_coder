@@ -1,0 +1,173 @@
+// Comienzo de propiedades para store.html
+// store_main
+
+body .store__main {
+    grid-column: 1 / 5;
+    align-items: center;
+    align-content: center;
+    margin: 7vh auto;
+
+    h1 {
+        font-family: $font-primary;
+        font-size: 7vw;
+        font-weight: $thin;
+        margin-bottom: 3vh;
+
+        strong {
+            font-weight: $light;
+        }
+    }
+
+    video {
+        border: $secondary 0.2rem solid;
+        border-radius: 3rem;
+        width: fit-content;
+    }
+}
+
+
+// store__products
+
+body .store__products {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    margin: 3vh auto;
+    margin-bottom: 17vh;
+
+    .product {
+        width: 16.24vw;
+
+        p {
+            font-family: $font-primary;
+            font-size: 0.9vw;
+            margin-bottom: 2rem;
+        }
+
+        picture img {
+            width: 16.24vw;
+        }
+
+        button {
+            font-family: $font-primary;
+            font-weight: $light;
+            font-size: 1.5vw;
+            width: 11vw;
+            height: 2.4vw;
+            background-color: $primary;
+            border: $secondary 0.2rem solid;
+            border-radius: 3rem;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-left: 0.5vw;
+            margin-top: 1vh;
+
+            img {
+                width: 1.3vw;
+                height: 1.3vw;
+            }
+
+            &:hover {
+                background-color: $secondary;
+                border: $tertiary 0.2rem solid;
+                transition: background-color .3s ease-in-out, border .3s ease-in-out;
+            }
+        } 
+
+        &__title {
+            font-family: $font-primary;
+            font-size: 1.4vw;
+            font-weight: $semi;
+            margin-bottom: 0.5vh;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        .store__main {
+            h1 {
+                font-size:  9vw;
+            }
+        }
+
+        .store__products {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5vw;
+            margin: 6vh auto;
+
+            .product {
+                width: 34vw;
+                p {
+                    font-size: 1.8vw;
+                }
+
+                &__title {
+                    font-size: 3vw;
+                }
+
+                picture img {
+                    width: 34vw;
+                }
+
+                button {
+                    width: 15vw;
+                    height: 3.3vh;
+                    font-size: 2.2vw;
+
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body .store__video video {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        .store__main h1 {
+            font-size: 9vw;
+        }
+
+        .store__products {
+            grid-template-columns: 1fr;
+            margin: 6vh auto;
+
+            .product {
+                width: 68vw;
+
+                picture img {
+                    width: 68vw;
+                }
+
+                p {
+                    font-size: 3.5vw;
+                }
+
+                &__title {
+                    font-size: 6vw;
+                }
+
+                button {
+                    width: 25vw;
+                    height: 3.4vh;
+                    font-size: 3.5vw;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
