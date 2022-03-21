@@ -1,23 +1,40 @@
-// Helpers
-.grid {
+// Mixins
+
+@mixin grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(5, auto);
     align-items: center;
 }
 
-.flex-row {
+@mixin flex-row {
     display: flex;
 }
 
-.flex-column {
+@mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
-.container {
+@mixin container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.grid {
+    @include grid;
+}
+
+.flex-row {
+    @include flex-row;
+}
+
+.flex-column {
+    @include flex-column;
+}
+
+.container {
+    @include container;
 }
 
 /* Animations */

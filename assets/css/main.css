@@ -401,6 +401,7 @@ body .faq {
     width: 50vw;
     height: 47vh;
     overflow-y: scroll;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     margin: 5vh 0 10vh 0; }
     body .faq__list ul {
