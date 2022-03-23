@@ -5,8 +5,7 @@ footer {
     min-height: 6vh;
 
     .footer {
-        align-items: center;
-        justify-content: space-between;
+        @include flex($justify:space-between);
         max-width: 1080px;
         margin: 0 auto;
         font-family: $font-primary;

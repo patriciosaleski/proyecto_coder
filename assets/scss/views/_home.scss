@@ -4,8 +4,7 @@
 body .product__main {
         grid-column: 1 / 5;
         grid-row: 2 / 3;
-        align-items: center;
-        align-content: center;
+        @include flex($direction:space-evenly);
         justify-content: space-evenly;
         margin-top: 10vh;
 
@@ -15,10 +14,10 @@ body .product__main {
             margin: 0 3vw;
         }
         .product__info {
+            @include flex(column);
             font-family: $font-primary;
             text-align: center;
             justify-self: center;
-            align-items: center;
             margin: 0 3vw;
     
             h1 {
@@ -51,7 +50,7 @@ body .product__main {
                     color: $black;
                     border-color: $secondary;
                     transition: background-color .3s ease-in-out,
-                            border-color .3s ease-in-out;
+                                border-color .3s ease-in-out;
                     
                 a {
                     color: $black;
@@ -87,7 +86,7 @@ body .product__main {
 
 @media screen and (max-width: 768px) {
     body .product__main {
-        flex-direction: column;
+        @include flex(column);
         
         .product__video {
             width: 90%;
@@ -118,7 +117,10 @@ body .product__main {
 }
 
 @media screen and (max-width: 480px) {
-    body .product__info {
+    body .product__main {
+        margin-bottom: 9rem;
+
+        .product__info {
         h1 {
             font-size: 5em;
         }
@@ -130,16 +132,15 @@ body .product__main {
         }
     }
 }
-
+}
 
 // product__customization y product__discover
 
 body .product__description {
+    @include flex($justify: space-evenly);
     margin: 14vh 4vw;
     grid-column: 1 / 5;
     grid-row: 3 / 4;
-    justify-content: space-evenly;
-    align-items: center;
 
     .product__customization {
         h2 {
@@ -162,8 +163,7 @@ body .product__description {
 
         a {
             margin-top: 2rem;
-            display: flex;
-            align-items: center;
+            @include flex();
             background-size: 200% 100%;
             background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $secondary 50%);
             transition: background-position .4s;
@@ -179,7 +179,7 @@ body .product__description {
 @media screen and (max-width: 1080px) {
     body .product__description {
         margin: 15vh 3vw;
-        justify-content: space-around;
+        @include flex($justify:space-around);
 
         .product__customization {
             h2 {
@@ -286,7 +286,7 @@ body .product__features {
         background-color: rgba(0,0,0,0.03);
 
         p {
-            font-size: 2vw;
+            font-size: 1.7vw;
             font-weight: $semi;
             margin-bottom: 2rem;
             margin-left: 0.5rem;
@@ -295,7 +295,7 @@ body .product__features {
 }
 
 @media screen and (min-width: 1400px) {
-    body .product__features p {
+    body .product__features .product__feature p {
         font-size: 1.6vw;
     }
 }
@@ -309,8 +309,10 @@ body .product__features {
 }
 
 @media screen and (max-width: 768px) {
-    body .product__features p {
-        font-size: 3vw;
+    body .product__features {
+        .product__feature p {
+            font-size: 3vw;
+        }
     }
 }
 
@@ -319,8 +321,10 @@ body .product__features {
         grid-template-columns: 1fr;
         margin-top: 0;
 
-        p {
-            font-size: 5vw;
-        }
+        .product__feature {
+            p {
+                font-size: 5vw;
+            }
+        } 
     }
 }

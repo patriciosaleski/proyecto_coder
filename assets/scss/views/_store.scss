@@ -18,6 +18,11 @@ body .store__main {
         }
     }
 
+    .store__video {
+        width: fit-content;
+        @include push--auto;
+    }
+
     video {
         border: $secondary 0.2rem solid;
         border-radius: 3rem;
@@ -50,6 +55,7 @@ body .store__products {
         }
 
         button {
+            @include flex();
             font-family: $font-primary;
             font-weight: $light;
             font-size: 1.5vw;

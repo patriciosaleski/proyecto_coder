@@ -8,12 +8,11 @@ header {
     box-shadow: 0px 22px 87px 1px rgba(0,0,0,0.3);
 
     .navbar {
+        @include flex(row, space-between);
         min-height: 5vh;
-        align-items: center;
-        justify-content: space-between;
 
         &__menu {
-            align-items: center;
+            @include flex(row);
     
             .menu__item {
                 margin: 0 0.5rem;
@@ -64,6 +63,7 @@ header {
             margin: 0;
 
             &__link {
+                @include flex(column);
                 font-family: $font-primary;
                 font-weight: $light;
                 text-align: center;
@@ -83,8 +83,7 @@ header {
         }
 
         #cart {
-            display: flex;
-            align-items: center;
+            @include flex();
             padding: 1rem 3rem;
         }
     }

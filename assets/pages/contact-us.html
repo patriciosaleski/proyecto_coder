@@ -12,11 +12,11 @@
 
 <body class="grid">
     <header>
-        <nav class="navbar flex-row container">
+        <nav class="navbar container">
             <div class="navbar__logo">
                 <a href="../../index.html"><img src="../img/icon/logo.png" alt="Logo de Uñika" /></a>
             </div>
-            <ul class="navbar__menu flex-row">
+            <ul class="navbar__menu">
                 <li class="menu__item"><a class="menu__link" href="./store.html">Tienda</a></li>
                 <li class="menu__item"><a class="menu__link" href="./about.html">Nosotros</a></li>
                 <li id="active" class="menu__item"><a class="menu__link" href="./contact-us.html">Contacto</a></li>
@@ -25,17 +25,17 @@
                         <img src="../img/icon/cart.png" /> Mi Carro</a>
                 </li>
                 <li class="menu__item">
-                    <a href="" id="hamburger__icon" class="flex-row"><img src="../img/icon/hamburger.png"
+                    <a href="" id="hamburger__icon"><img src="../img/icon/hamburger.png"
                             alt="Hamburger icon"></a>
                     <ul class="sub-menu">
                         <li class="sub-menu__item">
-                            <a href="./store.html" class="sub-menu__link flex-column">Tienda</a>
+                            <a href="./store.html" class="sub-menu__link">Tienda</a>
                         </li>
                         <li class="sub-menu__item">
-                            <a href="./about.html" class="sub-menu__link flex-column">Nosotros</a>
+                            <a href="./about.html" class="sub-menu__link">Nosotros</a>
                         </li>
                         <li class="sub-menu__item">
-                            <a href="./contact-us.html" class="sub-menu__link flex-column">Contacto</a>
+                            <a href="./contact-us.html" class="sub-menu__link">Contacto</a>
                         </li>
                     </ul>
                 </li>
@@ -49,17 +49,17 @@
 
     <div class="contact-us__main">
         <div class="contact__form">
-            <form data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="flex-column">
+            <form data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" pattern="[A-Za-z]+"
                     oninvalid="setCustomValidity('Ingrese solamente caracteres alfabéticos')"
                     placeholder="Ingrese su nombre" required>
                 <br>
                 <label for="email">Correo</label>
-                <input class="form-control-lg" type="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                <input type="email" name="email" placeholder="Ingrese su correo electrónico" required>
                 <br>
                 <label for="subject">Consulta</label>
-                <input class="form-control-lg" type="text" name="subject" placeholder="Ingrese el motivo de su consulta" required>
+                <input type="text" name="subject" placeholder="Ingrese el motivo de su consulta" required>
                 <br>
                 <label for="explanation">Descripción</label>
                 <textarea name="explanation" maxlength="200" cols="20" rows="4" required></textarea>
@@ -71,11 +71,11 @@
     </div>
 
     <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="faq__link">
-        <a class="flex-row" href="./faq.html"><img src="../img/icon/question-icon.png" alt="Question Icon">Preguntas Frecuentes</a>
+        <a href="./faq.html"><img src="../img/icon/question-icon.png" alt="Question Icon">Preguntas Frecuentes</a>
     </div>
     
     <footer>
-        <div class="footer flex-row">
+        <div class="footer">
             <div class="faq__links">
                 <a href="./about.html">¿Quienes somos?</a>
                 <a href="./faq.html">Preguntas Frecuentes</a>

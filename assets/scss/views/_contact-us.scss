@@ -21,7 +21,8 @@ body {
             margin: 5vh 7vw;
 
             .contact__form {
-
+                form {@include flex(column, $align:flex-start);}
+                
                 input, label {
                     font-family: $font-primary;
                     font-size: 1.8em;
@@ -148,7 +149,7 @@ body .faq__link {
     grid-row: 3 / 5;
 
     a {
-        align-items: center;
+        @include flex();
         background-color: $secondary;
         border: $tertiary 0.2rem solid;
         border-radius: 1rem;
@@ -175,8 +176,7 @@ body .faq__link {
     body .faq__link {
         grid-column: 1 / 5;
         grid-row: 4 / 5;
-        display: flex;
-        flex-flow: row nowrap;
+        @include flex();
         margin: 0 auto 0 15vw;
 
         a {

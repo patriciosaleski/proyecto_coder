@@ -43,13 +43,6 @@ body {
   grid-template-rows: repeat(5, auto);
   align-items: center; }
 
-.flex-row {
-  display: flex; }
-
-.flex-column {
-  display: flex;
-  flex-direction: column; }
-
 .container {
   max-width: 1200px;
   margin: 0 auto; }
@@ -73,8 +66,10 @@ footer {
   background-color: #F2F0D0;
   min-height: 6vh; }
   footer .footer {
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     max-width: 1080px;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
@@ -135,10 +130,15 @@ header {
   background-color: #F2F0D0;
   box-shadow: 0px 22px 87px 1px rgba(0, 0, 0, 0.3); }
   header .navbar {
-    min-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; }
+    min-height: 5vh; }
     header .navbar__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       align-items: center; }
       header .navbar__menu .menu__item {
         margin: 0 0.5rem; }
@@ -173,6 +173,10 @@ header {
       padding: 0;
       margin: 0; }
       header .navbar .sub-menu__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         font-family: "Roboto", sans-serif;
         font-weight: 300;
         text-align: center;
@@ -186,6 +190,8 @@ header {
       border: #F2A516 0.2rem solid; }
     header .navbar #cart {
       display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       align-items: center;
       padding: 1rem 3rem; }
 
@@ -215,6 +221,9 @@ header {
       position: absolute; } }
 
 body main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center; }
   body main .about h1 {
     font-family: "Roboto", sans-serif;
@@ -228,7 +237,8 @@ body main .about {
 
 body .site__img {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center; }
   body .site__img img {
     margin: 10vh auto;
@@ -272,6 +282,11 @@ body .contact-us__main {
   grid-column: 1 / 3;
   grid-row: 3 / 5;
   margin: 5vh 7vw; }
+  body .contact-us__main .contact__form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
   body .contact-us__main .contact__form input, body .contact-us__main .contact__form label {
     font-family: "Roboto", sans-serif;
     font-size: 1.8em;
@@ -343,6 +358,9 @@ body .faq__link {
   grid-column: 3 / 5;
   grid-row: 3 / 5; }
   body .faq__link a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     background-color: #F2A516;
     border: #F2D335 0.2rem solid;
@@ -365,7 +383,9 @@ body .faq__link {
     grid-column: 1 / 5;
     grid-row: 4 / 5;
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0 auto 0 15vw; }
     body .faq__link a {
       font-size: 3vw; }
@@ -390,6 +410,9 @@ body .faq__link {
 body .faq {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center; }
   body .faq__title h1 {
     font-family: "Roboto", sans-serif;
@@ -482,6 +505,9 @@ body .support__button button {
     transition: background-color .4s ease-in-out; }
 
 body .support__button--content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   padding: 2rem 2.5rem;
   font-family: "Roboto", sans-serif;
@@ -539,8 +565,10 @@ body .support__button--content {
 body .product__main {
   grid-column: 1 / 5;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  align-content: center;
   justify-content: space-evenly;
   margin-top: 10vh; }
   body .product__main .product__video video {
@@ -548,10 +576,13 @@ body .product__main {
     width: 100%;
     margin: 0 3vw; }
   body .product__main .product__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     font-family: "Roboto", sans-serif;
     text-align: center;
     justify-self: center;
-    align-items: center;
     margin: 0 3vw; }
     body .product__main .product__info h1 {
       font-size: 7em;
@@ -597,7 +628,10 @@ body .product__main {
 
 @media screen and (max-width: 768px) {
   body .product__main {
-    flex-direction: column; }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
     body .product__main .product__video {
       width: 90%;
       margin-bottom: 5vh; }
@@ -614,19 +648,23 @@ body .product__main {
       font-size: 2.4em; } }
 
 @media screen and (max-width: 480px) {
-  body .product__info h1 {
-    font-size: 5em; }
-  body .product__info button {
-    width: 18rem;
-    height: 4rem;
-    font-size: 1.8em; } }
+  body .product__main {
+    margin-bottom: 9rem; }
+    body .product__main .product__info h1 {
+      font-size: 5em; }
+    body .product__main .product__info button {
+      width: 18rem;
+      height: 4rem;
+      font-size: 1.8em; } }
 
 body .product__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   margin: 14vh 4vw;
   grid-column: 1 / 5;
-  grid-row: 3 / 4;
-  justify-content: space-evenly;
-  align-items: center; }
+  grid-row: 3 / 4; }
   body .product__description .product__customization h2 {
     font-size: 4.6em;
     font-weight: 500;
@@ -642,6 +680,8 @@ body .product__description {
     body .product__description .product__discover a {
       margin-top: 2rem;
       display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       align-items: center;
       background-size: 200% 100%;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #F2A516 50%);
@@ -653,7 +693,10 @@ body .product__description {
 @media screen and (max-width: 1080px) {
   body .product__description {
     margin: 15vh 3vw;
-    justify-content: space-around; }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
     body .product__description .product__customization h2 {
       font-size: 2.8em;
       width: 32vw; }
@@ -715,13 +758,13 @@ body .product__features {
   body .product__features .product__feature {
     background-color: rgba(0, 0, 0, 0.03); }
     body .product__features .product__feature p {
-      font-size: 2vw;
+      font-size: 1.7vw;
       font-weight: 500;
       margin-bottom: 2rem;
       margin-left: 0.5rem; }
 
 @media screen and (min-width: 1400px) {
-  body .product__features p {
+  body .product__features .product__feature p {
     font-size: 1.6vw; } }
 
 @media screen and (max-width: 1023px) {
@@ -731,14 +774,14 @@ body .product__features {
     margin: 6vh auto; } }
 
 @media screen and (max-width: 768px) {
-  body .product__features p {
+  body .product__features .product__feature p {
     font-size: 3vw; } }
 
 @media screen and (max-width: 480px) {
   body .product__features {
     grid-template-columns: 1fr;
     margin-top: 0; }
-    body .product__features p {
+    body .product__features .product__feature p {
       font-size: 5vw; } }
 
 body .store__main {
@@ -753,6 +796,10 @@ body .store__main {
     margin-bottom: 3vh; }
     body .store__main h1 strong {
       font-weight: 300; }
+  body .store__main .store__video {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; }
   body .store__main video {
     border: #F2A516 0.2rem solid;
     border-radius: 3rem;
@@ -774,6 +821,10 @@ body .store__products {
     body .store__products .product picture img {
       width: 16.24vw; }
     body .store__products .product button {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
       font-size: 1.5vw;
