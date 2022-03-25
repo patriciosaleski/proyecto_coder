@@ -21,17 +21,54 @@
     }
 }
 
-// @mixin font-primary($size: false, $color: false, $weight: false,  $lh: false) {
-//     font-family: 'Roboto', sans-serif;
-//     @if $size { font-size: $size; }
-//     @if $color { color: $color; }
-//     @if $weight { font-weight: $weight; }
-//     @if $lh { line-height: $lh; }
-// }
+@mixin btn ($btn-height, $btn-width: fit-content, $btn-color: $primary, 
+            $btn-border: $secondary, $useHover: true) {
+    background-color: $btn-color;
+    border: $btn-border 0.2rem solid;
+    border-radius: calc(#{$btn-height}/2);
+    height: $btn-height;
+    width: $btn-width;
+
+    @if $useHover {
+        &:hover {
+            background-color: $btn-border;
+            border: $btn-color 0.2rem solid;
+            transition: background-color .3s ease-in-out, border .3s ease-in-out;
+        }
+    }
+}
+
+@mixin hover--fade () {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, $primary 50%, $secondary 50%);
+    transition: background-position .4s;
+
+    &:hover {
+        border: $tertiary 0.2rem solid;
+        background-position: -100% 0;
+    }
+}
 
 @mixin container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+$font--weight: (
+    thin: 100,
+    light: 300,
+    semi: 500,
+    bold: 700
+);
+
+
+@mixin primary-font ($size: false, $color: false, $weight: false,  $lh: false, $ls: false) {
+    font-family: 'Roboto', sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: map-get($font--weight, $weight); }
+    @if $lh { line-height: $lh; }
+    @if $ls { letter-spacing: -0.03em; }
 }
 
 .grid {

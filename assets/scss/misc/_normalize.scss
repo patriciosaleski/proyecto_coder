@@ -15,6 +15,7 @@
 // Globals
 
 html {
+    @include primary-font();
     font-family: $font-primary;
     font-size: 62.5%; /* 1em = 10px */
     height: 100%;

@@ -6,8 +6,8 @@ footer {
 
     .footer {
         @include flex($justify:space-between);
+        @include push--auto;
         max-width: 1080px;
-        margin: 0 auto;
         font-family: $font-primary;
         font-size: 1.6em;
         min-height: 5vh;

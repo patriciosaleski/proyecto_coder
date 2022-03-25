@@ -70,8 +70,9 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1080px;
-    margin: 0 auto;
     font-family: "Roboto", sans-serif;
     font-size: 1.6em;
     min-height: 5vh; }
@@ -147,18 +148,21 @@ header {
         header .navbar__menu .menu__item:hover .sub-menu {
           display: block;
           z-index: 5; }
-        header .navbar__menu .menu__item .menu__link {
+        header .navbar__menu .menu__item .menu__link, header .navbar__menu .menu__item .menu__link--active {
           font-size: 2.4em;
           font-weight: 300;
           padding: 0.5rem 1.5rem;
           background-color: #F2D335;
           border: 0.05em solid #000;
           border-radius: 1rem; }
-          header .navbar__menu .menu__item .menu__link img {
+          header .navbar__menu .menu__item .menu__link--active {
+            background-color: #F2F0D0;
+            border: #F2A516 0.2rem solid; }
+          header .navbar__menu .menu__item .menu__link img, header .navbar__menu .menu__item .menu__link--active img {
             height: 3.2rem;
             width: 3.2rem;
             margin-right: 1rem; }
-          header .navbar__menu .menu__item .menu__link:hover {
+          header .navbar__menu .menu__item .menu__link:hover, header .navbar__menu .menu__item .menu__link--active:hover {
             background-color: #F2F0D0;
             font-weight: 400;
             border-color: #F2A516;
@@ -185,9 +189,6 @@ header {
         header .navbar .sub-menu__link:hover {
           background-color: #F2A516;
           transition: background-color .2s ease-in-out; }
-    header .navbar #active a {
-      background-color: #F2F0D0;
-      border: #F2A516 0.2rem solid; }
     header .navbar #cart {
       display: flex;
       flex-direction: row;
@@ -202,14 +203,14 @@ header {
 @media screen and (max-width: 1023px) {
   header .navbar {
     max-width: 768px; }
-    header .navbar .navbar__menu .menu__item .menu__link {
+    header .navbar .navbar__menu .menu__item .menu__link, header .navbar .navbar__menu .menu__item .menu__link--active {
       font-size: 1.6em;
       padding: 0.2rem 0.7rem; }
     header .navbar .navbar__menu .menu__item #cart {
       padding: 0.5rem 1rem; } }
 
 @media screen and (max-width: 768px) {
-  header .navbar__menu .menu__item .menu__link, header .navbar__menu .menu__item #cart {
+  header .navbar__menu .menu__item .menu__link, header .navbar__menu .menu__item .menu__link--active, header .navbar__menu .menu__item #cart {
     display: none; }
   header .navbar__menu .menu__item #hamburger__icon {
     display: block;
@@ -287,6 +288,8 @@ body .contact-us__main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; }
+  body .contact-us__main .contact__form input {
+    padding-left: 1rem; }
   body .contact-us__main .contact__form input, body .contact-us__main .contact__form label {
     font-family: "Roboto", sans-serif;
     font-size: 1.8em;
@@ -299,21 +302,22 @@ body .contact-us__main {
     margin-bottom: 4vh;
     min-height: 4vh; }
   body .contact-us__main .contact__form button {
-    font-family: "Roboto", sans-serif;
-    font-size: 2.4em;
-    letter-spacing: -0.03em;
-    border: #F2D335 0.2rem solid;
-    border-radius: 3rem;
-    min-height: 5vh;
+    background-color: #F2F0D0;
+    border: #F2A516 0.2rem solid;
+    border-radius: calc(4vh/2);
+    height: 4vh;
+    width: fit-content;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, #F2F0D0 50%, #F2A516 50%);
     transition: background-position .4s;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4em;
+    letter-spacing: -0.03em;
     margin: 0 0 8vh 2vw;
-    padding: 0 1.4vw;
-    width: fit-content; }
+    padding: 0 1.4vw; }
     body .contact-us__main .contact__form button:hover {
-      background-position: -100% 0;
-      color: #000000; }
+      border: #F2D335 0.2rem solid;
+      background-position: -100% 0; }
 
 @media screen and (max-width: 1023px) {
   body .contact-us__main .contact__form input, body .contact-us__main .contact__form label {
@@ -333,10 +337,13 @@ body .contact-us__main {
       transition: width .2s;
       margin-bottom: 2vh; }
     body .contact-us__main .contact__form button {
-      font-size: 3vw;
-      min-height: 5vh;
-      margin: 0 0 8vh 2vw;
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(4vh/2);
+      height: 4vh;
       width: 15vw;
+      font-size: 3vw;
+      margin: 0 0 8vh 2vw;
       font-weight: 500; } }
 
 @media screen and (max-width: 600px) {
@@ -349,8 +356,12 @@ body .contact-us__main {
     width: 86vw;
     margin-bottom: 2vh; }
   body .contact-us__main .contact__form button {
+    background-color: #F2F0D0;
+    border: #F2A516 0.2rem solid;
+    border-radius: calc(4vh/2);
+    height: 4vh;
+    width: 24vw;
     font-size: 5vw;
-    width: 30vw;
     font-weight: 400; } }
 
 /* comienzo de propiedades para faq__link */
@@ -398,7 +409,8 @@ body .faq__link {
 
 @media screen and (max-width: 600px) {
   body .faq__link {
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto; }
     body .faq__link a {
       font-size: 4.5vw;
       width: 60vw; }
@@ -573,6 +585,7 @@ body .product__main {
   margin-top: 10vh; }
   body .product__main .product__video video {
     border-radius: 4rem;
+    border: #F2A516 0.2rem solid;
     width: 100%;
     margin: 0 3vw; }
   body .product__main .product__info {
@@ -597,34 +610,38 @@ body .product__main {
       background-color: rgba(0, 0, 0, 0.07);
       box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.07); }
     body .product__main .product__info button {
-      width: 24rem;
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(5rem/2);
       height: 5rem;
-      background: #F2A516;
-      border-radius: 3rem;
-      border: #F2F0D0 0.2rem solid;
+      width: 24rem;
       font-size: 2.4em;
       letter-spacing: -0.03em; }
       body .product__main .product__info button:hover {
-        background-color: #F2F0D0;
-        color: #000;
-        border-color: #F2A516;
-        transition: background-color .3s ease-in-out, border-color .3s ease-in-out; }
-        body .product__main .product__info button:hover a {
-          color: #000; }
+        background-color: #F2A516;
+        border: #F2F0D0 0.2rem solid;
+        transition: background-color .3s ease-in-out, border .3s ease-in-out; }
       body .product__main .product__info button a {
-        color: #FFFFFF;
+        color: #000;
         padding: 1rem 2rem; }
 
 @media screen and (max-width: 1023px) {
-  body .product__info h1 {
+  body .product__main .product__info h1 {
     font-size: 5em; }
-  body .product__info p {
+  body .product__main .product__info p {
     font-size: 1.8em;
     width: 30vw; }
-  body .product__info button {
-    width: 18rem;
+  body .product__main .product__info button {
+    background-color: #F2F0D0;
+    border: #F2A516 0.2rem solid;
+    border-radius: calc(4rem/2);
     height: 4rem;
-    font-size: 1.8em; } }
+    width: 18rem;
+    font-size: 1.8em; }
+    body .product__main .product__info button:hover {
+      background-color: #F2A516;
+      border: #F2F0D0 0.2rem solid;
+      transition: background-color .3s ease-in-out, border .3s ease-in-out; } }
 
 @media screen and (max-width: 768px) {
   body .product__main {
@@ -643,9 +660,16 @@ body .product__main {
       font-size: 2em;
       width: 70vw; }
     body .product__main .product__info button {
-      width: 24rem;
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(5rem/2);
       height: 5rem;
-      font-size: 2.4em; } }
+      width: 24rem;
+      font-size: 2.4em; }
+      body .product__main .product__info button:hover {
+        background-color: #F2A516;
+        border: #F2F0D0 0.2rem solid;
+        transition: background-color .3s ease-in-out, border .3s ease-in-out; } }
 
 @media screen and (max-width: 480px) {
   body .product__main {
@@ -653,9 +677,16 @@ body .product__main {
     body .product__main .product__info h1 {
       font-size: 5em; }
     body .product__main .product__info button {
-      width: 18rem;
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(4rem/2);
       height: 4rem;
-      font-size: 1.8em; } }
+      width: 18rem;
+      font-size: 1.8em; }
+      body .product__main .product__info button:hover {
+        background-color: #F2A516;
+        border: #F2F0D0 0.2rem solid;
+        transition: background-color .3s ease-in-out, border .3s ease-in-out; } }
 
 body .product__description {
   display: flex;
@@ -823,27 +854,25 @@ body .store__products {
     body .store__products .product button {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-evenly;
       align-items: center;
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(2.4vw/2);
+      height: 2.4vw;
+      width: 11vw;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
       font-size: 1.5vw;
-      width: 11vw;
-      height: 2.4vw;
-      background-color: #F2F0D0;
-      border: #F2A516 0.2rem solid;
-      border-radius: 3rem;
-      justify-content: space-evenly;
-      align-items: center;
       margin-left: 0.5vw;
       margin-top: 1vh; }
+      body .store__products .product button:hover {
+        background-color: #F2A516;
+        border: #F2F0D0 0.2rem solid;
+        transition: background-color .3s ease-in-out, border .3s ease-in-out; }
       body .store__products .product button img {
         width: 1.3vw;
         height: 1.3vw; }
-      body .store__products .product button:hover {
-        background-color: #F2A516;
-        border: #F2D335 0.2rem solid;
-        transition: background-color .3s ease-in-out, border .3s ease-in-out; }
     body .store__products .product__title {
       font-family: "Roboto", sans-serif;
       font-size: 1.4vw;
@@ -866,9 +895,17 @@ body .store__products {
       body .store__products .product picture img {
         width: 34vw; }
       body .store__products .product button {
+        background-color: #F2F0D0;
+        border: #F2A516 0.2rem solid;
+        border-radius: calc(3.3vw/2);
+        height: 3.3vw;
         width: 15vw;
-        height: 3.3vh;
-        font-size: 2.2vw; }
+        font-size: 2.2vw;
+        padding: 0.5rem 0.8rem; }
+        body .store__products .product button:hover {
+          background-color: #F2A516;
+          border: #F2F0D0 0.2rem solid;
+          transition: background-color .3s ease-in-out, border .3s ease-in-out; }
         body .store__products .product button img {
           width: 2vw;
           height: 2vw; } }
@@ -892,9 +929,16 @@ body .store__products {
       body .store__products .product__title {
         font-size: 6vw; }
       body .store__products .product button {
+        background-color: #F2F0D0;
+        border: #F2A516 0.2rem solid;
+        border-radius: calc(5vw/2);
+        height: 5vw;
         width: 25vw;
-        height: 3.4vh;
         font-size: 3.5vw; }
+        body .store__products .product button:hover {
+          background-color: #F2A516;
+          border: #F2F0D0 0.2rem solid;
+          transition: background-color .3s ease-in-out, border .3s ease-in-out; }
         body .store__products .product button img {
           width: 20px;
           height: 20px; } }

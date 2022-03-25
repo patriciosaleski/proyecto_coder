@@ -2,71 +2,57 @@
 // product__video y product__info
 
 body .product__main {
-        grid-column: 1 / 5;
-        grid-row: 2 / 3;
-        @include flex($direction:space-evenly);
-        justify-content: space-evenly;
-        margin-top: 10vh;
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    @include flex($direction:space-evenly);
+    justify-content: space-evenly;
+    margin-top: 10vh;
 
-        .product__video video {
-            border-radius: 4rem;
-            width: 100%;
-            margin: 0 3vw;
+    .product__video video {
+        border-radius: 4rem;
+        border: $secondary 0.2rem solid;
+        width: 100%;
+        margin: 0 3vw;
+    }
+    .product__info {
+        @include flex(column);
+        font-family: $font-primary;
+        text-align: center;
+        justify-self: center;
+        margin: 0 3vw;
+
+        h1 {
+            font-size: 7em;
+            font-weight: $thin;
+            line-height: 1em;
+            margin-bottom: 2rem;
         }
-        .product__info {
-            @include flex(column);
-            font-family: $font-primary;
-            text-align: center;
-            justify-self: center;
-            margin: 0 3vw;
-    
-            h1 {
-                font-size: 7em;
-                font-weight: $thin;
-                line-height: 1em;
-                margin-bottom: 2rem;
-            }
-    
-            p {
-                font-weight: $light;
-                font-size: 2.2em;
-                width: 35vw;
-                margin-bottom: 3rem;
-                background-color: rgba(0,0,0,0.07);
-                box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.07);
-            }
-    
-            button {
-                width: 24rem;
-                height: 5rem;
-                background: $secondary;
-                border-radius: 3rem;
-                border: $primary 0.2rem solid;
-                font-size: 2.4em;
-                letter-spacing: -0.03em;
 
-                &:hover {
-                    background-color: $primary;
-                    color: $black;
-                    border-color: $secondary;
-                    transition: background-color .3s ease-in-out,
-                                border-color .3s ease-in-out;
-                    
-                a {
-                    color: $black;
-                }
-            }
+            p {
+            font-weight: $light;
+            font-size: 2.2em;
+            width: 35vw;
+            margin-bottom: 3rem;
+            background-color: rgba(0,0,0,0.07);
+            box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.07);
+        }
     
+        button {
+            @include btn(5rem, 24rem);
+            font-size: 2.4em;
+            letter-spacing: -0.03em;
+                    
             a {
-                color: #FFFFFF;
+                color: $black;
                 padding: 1rem 2rem;
             }
         }
     }
 }
 
+
 @media screen and (max-width: 1023px) {
-    body .product__info {
+    body .product__main .product__info {
         h1 {
             font-size: 5em;
         }
@@ -77,8 +63,7 @@ body .product__main {
         }
 
         button {
-            width: 18rem;
-            height: 4rem;
+            @include btn(4rem, 18rem);
             font-size: 1.8em;
         }
     }
@@ -108,8 +93,7 @@ body .product__main {
             }
 
             button {
-                width: 24rem;
-                height: 5rem;
+                @include btn(5rem, 24rem);
                 font-size: 2.4em;
             }
         }
@@ -126,8 +110,7 @@ body .product__main {
         }
 
         button {
-            width: 18rem;
-            height: 4rem;
+            @include btn(4rem, 18rem);
             font-size: 1.8em;
         }
     }

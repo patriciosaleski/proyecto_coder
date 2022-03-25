@@ -22,6 +22,10 @@ body {
 
             .contact__form {
                 form {@include flex(column, $align:flex-start);}
+
+                input {
+                    padding-left: 1rem;
+                }
                 
                 input, label {
                     font-family: $font-primary;
@@ -39,23 +43,13 @@ body {
                 }
 
                 button {
+                    @include btn(4vh, $useHover: false);
+                    @include hover--fade();
                     font-family: $font-primary;
                     font-size: 2.4em;
                     letter-spacing: -0.03em;
-                    border: $tertiary 0.2rem solid;
-                    border-radius: 3rem;
-                    min-height: 5vh;
-                    background-size: 200% 100%;
-                    background-image: linear-gradient(to right, $primary 50%, $secondary 50%);
-                    transition: background-position .4s;
                     margin: 0 0 8vh 2vw;
                     padding: 0 1.4vw;
-                    width: fit-content;
-
-                    &:hover {
-                        background-position: -100% 0;
-                        color: #000000;
-                    }
                 }
             }
         }
@@ -100,10 +94,9 @@ body {
                     }
     
                     button {
+                        @include btn(4vh, 15vw, $useHover: false);
                         font-size: 3vw;
-                        min-height: 5vh;
                         margin: 0 0 8vh 2vw;
-                        width: 15vw;
                         font-weight: $semi;
                     }
                 }
@@ -132,8 +125,8 @@ body {
                     }
     
                     button {
+                        @include btn(4vh, 24vw, $useHover: false);
                         font-size: 5vw;
-                        width: 30vw;
                         font-weight: 400;
                     }
                 }
@@ -197,7 +190,7 @@ body .faq__link {
 
 @media screen and (max-width: 600px) {
     body .faq__link {
-        margin:  0 auto;
+        @include push--auto;
 
         a {
             font-size: 4.5vw;
