@@ -8,9 +8,7 @@ body {
             grid-row: 2 / 3;
 
             h1 {
-                font-family: $font-primary;
-                font-weight: $thin;
-                font-size: 7vw;
+                @include primary-font(7vw, $weight: thin);
                 margin: 7vh auto 3vh 5vw;
             }
         }
@@ -24,20 +22,20 @@ body {
                 form {@include flex(column, $align:flex-start);}
 
                 input {
+                    @include primary-font(1.8em);
+                    @include btn(2rem, 40vw, $useHover: false);
                     padding-left: 1rem;
+                    margin-bottom: 4vh;
+                    min-height: 4vh;
                 }
                 
-                input, label {
-                    font-family: $font-primary;
-                    font-size: 1.8em;
+                label {
+                    @include primary-font(1.8em);
                     margin-bottom: 0.8vh;
                 }
 
-                input, textarea {
-                    background-color: $primary;
-                    border-radius: 1rem;
-                    border: $secondary 0.2rem solid;
-                    width: 40vw;
+                textarea {
+                    @include btn(2rem, 40vw, $useHover: false);
                     margin-bottom: 4vh;
                     min-height: 4vh;
                 }
@@ -45,9 +43,7 @@ body {
                 button {
                     @include btn(4vh, $useHover: false);
                     @include hover--fade();
-                    font-family: $font-primary;
-                    font-size: 2.4em;
-                    letter-spacing: -0.03em;
+                    @include primary-font(2.4em, $ls: -0.03em);
                     margin: 0 0 8vh 2vw;
                     padding: 0 1.4vw;
                 }
@@ -95,9 +91,8 @@ body {
     
                     button {
                         @include btn(4vh, 15vw, $useHover: false);
-                        font-size: 3vw;
+                        @include primary-font(3vw, $weight: semi);
                         margin: 0 0 8vh 2vw;
-                        font-weight: $semi;
                     }
                 }
             }
@@ -109,8 +104,7 @@ body {
     body { 
         .contact-us {
             &__title h1 {
-                font-size: 8vw;
-                font-weight: $light;
+                @include primary-font(8vw, $weight: light);
             }
 
             &__main {
@@ -126,8 +120,7 @@ body {
     
                     button {
                         @include btn(4vh, 24vw, $useHover: false);
-                        font-size: 5vw;
-                        font-weight: 400;
+                        @include primary-font(5vw);
                     }
                 }
             }
@@ -143,12 +136,10 @@ body .faq__link {
 
     a {
         @include flex();
+        @include primary-font(1.9vw, $weight: light);
         background-color: $secondary;
         border: $tertiary 0.2rem solid;
         border-radius: 1rem;
-        font-family: $font-primary;
-        font-weight: $light;
-        font-size: 1.9vw;
         padding: 2vh 1vw;
         width: fit-content;
 

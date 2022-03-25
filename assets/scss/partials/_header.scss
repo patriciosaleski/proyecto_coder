@@ -27,8 +27,7 @@ header {
                 }
     
                 .menu__link {
-                    font-size: 2.4em;
-                    font-weight: $light;
+                    @include primary-font(2.4em, $weight: light);
                     padding: 0.5rem 1.5rem;
                     background-color: $tertiary;
                     border: 0.05em solid $black;
@@ -70,10 +69,7 @@ header {
 
             &__link {
                 @include flex(column);
-                font-family: $font-primary;
-                font-weight: $light;
-                text-align: center;
-                font-size: 1.8em;
+                @include primary-font(1.8em, $weight: light, $align: center);
                 padding: 1rem 2rem;
 
                 &:hover {

@@ -62,11 +62,13 @@ $font--weight: (
 );
 
 
-@mixin primary-font ($size: false, $color: false, $weight: false,  $lh: false, $ls: false) {
+@mixin primary-font ($size: false, $color: false, $weight: false, 
+                    $align:false, $lh: false, $ls: false) {
     font-family: 'Roboto', sans-serif;
     @if $size { font-size: $size; }
     @if $color { color: $color; }
     @if $weight { font-weight: map-get($font--weight, $weight); }
+    @if $align { text-align: $align; }
     @if $lh { line-height: $lh; }
     @if $ls { letter-spacing: -0.03em; }
 }

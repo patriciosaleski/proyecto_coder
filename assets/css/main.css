@@ -593,18 +593,20 @@ body .product__main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     justify-self: center;
     margin: 0 3vw; }
     body .product__main .product__info h1 {
+      font-family: 'Roboto', sans-serif;
       font-size: 7em;
       font-weight: 100;
       line-height: 1em;
       margin-bottom: 2rem; }
     body .product__main .product__info p {
-      font-weight: 300;
+      font-family: 'Roboto', sans-serif;
       font-size: 2.2em;
+      font-weight: 300;
       width: 35vw;
       margin-bottom: 3rem;
       background-color: rgba(0, 0, 0, 0.07);
@@ -697,14 +699,16 @@ body .product__description {
   grid-column: 1 / 5;
   grid-row: 3 / 4; }
   body .product__description .product__customization h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 4.6em;
     font-weight: 500;
     line-height: 4rem;
     width: 400px; }
   body .product__description .product__customization h3 {
+    font-family: 'Roboto', sans-serif;
     font-size: 3em;
-    font-weight: 500;
-    color: #F2A516; }
+    color: #F2A516;
+    font-weight: 500; }
   body .product__description .product__discover {
     font-size: 3.2em;
     width: 35vw; }
@@ -745,9 +749,10 @@ body .product__description {
   body .product__description {
     margin: 15vh 3vw; }
     body .product__description .product__customization h2 {
-      margin-top: 1rem;
+      font-family: 'Roboto', sans-serif;
       font-size: 2.5em;
       line-height: 2.6rem;
+      margin-top: 1rem;
       width: 21rem; }
     body .product__description .product__customization h3 {
       font-size: 1.8em; }
@@ -789,6 +794,7 @@ body .product__features {
   body .product__features .product__feature {
     background-color: rgba(0, 0, 0, 0.03); }
     body .product__features .product__feature p {
+      font-family: 'Roboto', sans-serif;
       font-size: 1.7vw;
       font-weight: 500;
       margin-bottom: 2rem;

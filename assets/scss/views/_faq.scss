@@ -9,11 +9,8 @@ body {
 
         &__title {
             h1 {
-                font-family: $font-primary;
-                font-size: 5.8vw;
-                font-weight: $thin;
+                @include primary-font(5.8vw, $weight: thin, $align: center);
                 margin: 4rem 0;
-                text-align: center;
             }
         }
         
@@ -34,16 +31,13 @@ body {
                     margin-bottom: 5rem;
 
                     h2 {
-                        font-size: 2.4em;
-                        letter-spacing: -0.04em;
+                        @include primary-font(2.4em, $ls: -0.04em);
                         font-family: $robotoMono;
                         margin-bottom: 0.5rem;
                     }
 
                     p {
-                        font-family: $font-primary;
-                        font-size: 1.8em;
-                        font-weight: $light;
+                        @include primary-font(1.8em, $weight: light);
                         padding-left: 3rem;
                         width: 90%;
                     }
@@ -151,9 +145,8 @@ body .support {
         justify-content: end;
 
         h2 {
+            @include primary-font(3em, $ls: -0.04em);
             font-family: $robotoMono;
-            font-size: 3em;
-            letter-spacing: -0.04em;
             margin-bottom: 2rem;
         }
     }

@@ -6,9 +6,7 @@ body {
         @include flex(column);
 
         h1 {
-            font-family: $font-primary;
-            font-size: 8vw;
-            font-weight: $thin;
+            @include primary-font(8vw, $weight: thin);
             margin-top: 7vh;
         }
 

@@ -6,10 +6,9 @@ footer {
 
     .footer {
         @include flex($justify:space-between);
+        @include primary-font(1.6em);
         @include push--auto;
         max-width: 1080px;
-        font-family: $font-primary;
-        font-size: 1.6em;
         min-height: 5vh;
 
         .socialMedia__links {

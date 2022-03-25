@@ -16,21 +16,17 @@ body .product__main {
     }
     .product__info {
         @include flex(column);
-        font-family: $font-primary;
-        text-align: center;
+        @include primary-font($align:center);
         justify-self: center;
         margin: 0 3vw;
 
         h1 {
-            font-size: 7em;
-            font-weight: $thin;
-            line-height: 1em;
+            @include primary-font(7em,$weight: thin, $lh: 1em);
             margin-bottom: 2rem;
         }
 
-            p {
-            font-weight: $light;
-            font-size: 2.2em;
+        p {
+            @include primary-font(2.2em, $weight: light);
             width: 35vw;
             margin-bottom: 3rem;
             background-color: rgba(0,0,0,0.07);
@@ -127,16 +123,12 @@ body .product__description {
 
     .product__customization {
         h2 {
-            font-size: 4.6em;
-            font-weight: $semi;
-            line-height: 4rem;
+            @include primary-font(4.6em, $weight: semi, $lh: 4rem);
             width: 400px;
         }
 
         h3 {
-            font-size: 3em;
-            font-weight: $semi;
-            color: $secondary;
+            @include primary-font(3em, $weight: semi, $color: $secondary);
         }
     }
 
@@ -196,9 +188,8 @@ body .product__description {
 
         .product__customization {
             h2 {
+                @include primary-font(2.5em, $lh: 2.6rem);
                 margin-top: 1rem;
-                font-size: 2.5em;
-                line-height: 2.6rem;
                 width: 21rem;
             }
 
@@ -269,8 +260,7 @@ body .product__features {
         background-color: rgba(0,0,0,0.03);
 
         p {
-            font-size: 1.7vw;
-            font-weight: $semi;
+            @include primary-font(1.7vw, $weight: semi);
             margin-bottom: 2rem;
             margin-left: 0.5rem;
         }
