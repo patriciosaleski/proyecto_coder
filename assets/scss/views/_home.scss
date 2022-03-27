@@ -127,7 +127,7 @@ body .product__description {
             width: 400px;
         }
 
-        h3 {
+        p {
             @include primary-font(3em, $weight: semi, $color: $secondary);
         }
     }
@@ -162,7 +162,7 @@ body .product__description {
                 width: 32vw;
             }
 
-            h3 {
+            p {
                 font-size: 2em;
             }
         }
@@ -193,7 +193,7 @@ body .product__description {
                 width: 21rem;
             }
 
-            h3 {
+            p {
                 font-size: 1.8em;
             }
         }

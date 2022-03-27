@@ -171,24 +171,19 @@ body .support {
 
         &--content {
             @include flex();
+            @include primary-font($align: left);
             padding: 2rem 2.5rem;
-            font-family: $font-primary;
-            text-align: left;
 
             h3, p {
                 margin: auto 0;
             }
 
             h3 {
-                font-size: 2em;
-                letter-spacing: -0.04em;
-                font-weight: $light;
+                @include primary-font(2em, $weight: light, $ls:-0.04em);
             }
 
             p {
-                font-size: 1.2em;
-                letter-spacing: -0.03em;
-                font-weight: $thin;
+                @include primary-font(1.2em, $ls: -0.03em, $weight: thin);
             }
         }
     }
