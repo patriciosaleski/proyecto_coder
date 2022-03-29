@@ -26,7 +26,7 @@ body {
                     @include btn(2rem, 40vw, $useHover: false);
                     padding-left: 1rem;
                     margin-bottom: 4vh;
-                    min-height: 4vh;
+                    min-height: 3.2rem;
                 }
                 
                 label {
@@ -36,12 +36,15 @@ body {
 
                 textarea {
                     @include btn(2rem, 40vw, $useHover: false);
+                    @include primary-font(1.6em);
                     margin-bottom: 4vh;
-                    min-height: 4vh;
+                    padding-left: 0.5rem;
+                    min-height: 8rem;
+                    resize: vertical;
                 }
 
                 button {
-                    @include btn(4vh, $useHover: false);
+                    @include btn(3.6rem, $useHover: false);
                     @include hover--fade();
                     @include primary-font(2.4em, $ls: -0.03em);
                     margin: 0 0 8vh 2vw;
@@ -90,7 +93,7 @@ body {
                     }
     
                     button {
-                        @include btn(4vh, 15vw, $useHover: false);
+                        @include btn(3.6rem, 15vw, $useHover: false);
                         @include primary-font(3vw, $weight: semi);
                         margin: 0 0 8vh 2vw;
                     }
@@ -119,7 +122,7 @@ body {
                     }
     
                     button {
-                        @include btn(4vh, 24vw, $useHover: false);
+                        @include btn(3.2rem, 24vw, $useHover: false);
                         @include primary-font(5vw);
                     }
                 }
