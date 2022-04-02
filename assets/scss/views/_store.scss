@@ -147,6 +147,7 @@ body .store__products {
                 button {
                     @include btn(5vw, 25vw);
                     font-size: 3.5vw;
+                    padding: 1.4rem;
 
                     img {
                         width: 20px;

@@ -36,6 +36,43 @@ hr {
 body {
   min-height: 100vh; }
 
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border: black 0.2rem solid;
+  border-radius: 50%; }
+
+.item--xl img {
+  width: 55%; }
+
+.item--l img {
+  width: 50%; }
+
+.item--m img {
+  width: 45%; }
+
+.item--s img {
+  width: 40%; }
+
+.circle-bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  border: none; }
+  .circle-bg:hover {
+    background-color: #F2F0D0;
+    transition: background-color 0.2s ease-in-out; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -258,6 +295,43 @@ header {
     display: none; }
   header .navbar__menu .menu__item #sub-menu--toggler, header .navbar__menu .menu__item .hamburger__icon {
     display: block; } }
+
+body .cart__link {
+  position: fixed;
+  bottom: 10vh;
+  right: 5vw;
+  background-color: #F2F0D0;
+  border-radius: 50%;
+  border: #F2A516 0.2rem solid;
+  height: 70px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 60px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  max-width: 70px;
+  /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+  -webkit-transition: max-width 0.7s;
+  transition: max-width 0.7s; }
+  body .cart__link:hover {
+    max-width: 500px; }
+  body .cart__link .text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3em;
+    font-weight: 300;
+    white-space: nowrap;
+    padding-right: 15px; }
+  body .cart__link .icon {
+    margin-right: 15px;
+    padding: 0px 8px 0 16px;
+    display: flex;
+    align-items: center; }
+
+@media screen and (max-width: 600px) {
+  body .cart__link {
+    bottom: 15vh; } }
 
 body main .about {
   display: flex;
@@ -997,7 +1071,8 @@ body .store__products {
         border-radius: calc(5vw/2);
         height: 5vw;
         width: 25vw;
-        font-size: 3.5vw; }
+        font-size: 3.5vw;
+        padding: 1.4rem; }
         body .store__products .product button:hover {
           background-color: #F2A516;
           border: #F2F0D0 0.2rem solid;
@@ -1005,3 +1080,317 @@ body .store__products {
         body .store__products .product button img {
           width: 20px;
           height: 20px; } }
+
+body .cart__body {
+  grid-column: 1 / 5;
+  grid-row: 2 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  body .cart__body--low {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 0 12rem 0;
+    padding: 0 2rem; }
+    body .cart__body--low .shipping {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1.5rem; }
+      body .cart__body--low .shipping form input {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+        font-weight: 300;
+        background-color: #F2F0D0;
+        border-radius: 1rem;
+        border: #F2A516 0.1rem solid;
+        height: 3rem;
+        width: fit-content;
+        padding-left: 1rem; }
+      body .cart__body--low .shipping button {
+        background-color: #F2A516;
+        border: #F2F0D0 0.2rem solid;
+        border-radius: calc(3.4rem/2);
+        height: 3.4rem;
+        width: fit-content;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+        font-weight: 300;
+        padding: 0 2rem; }
+        body .cart__body--low .shipping button:hover {
+          background-color: #F2F0D0;
+          border: #F2A516 0.2rem solid;
+          transition: background-color .3s ease-in-out, border .3s ease-in-out; }
+
+body .cart__title h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 7vw;
+  font-weight: 100;
+  margin: 6rem 0; }
+
+body .cart__main {
+  margin: 0 4rem; }
+  body .cart__main .cart__items {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: start;
+    align-content: center;
+    row-gap: 2.5rem; }
+    body .cart__main .cart__items .cart__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: rgba(242, 240, 208, 0.6);
+      border-radius: 2rem;
+      padding: 2rem 0; }
+      body .cart__main .cart__items .cart__item--info {
+        width: 44%; }
+      body .cart__main .cart__items .cart__item--name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.4em;
+        margin-bottom: 1.5rem; }
+      body .cart__main .cart__items .cart__item--desc {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.8em;
+        font-weight: 300;
+        width: 76%; }
+      body .cart__main .cart__items .cart__item--quantity {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.4rem;
+        background-color: #F2D335;
+        border-radius: 1.6rem;
+        padding: 1.2rem; }
+        body .cart__main .cart__items .cart__item--quantity p {
+          font-family: 'Roboto', sans-serif;
+          font-size: 4.6em;
+          font-weight: 100; }
+        body .cart__main .cart__items .cart__item--quantity--mod {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.7rem; }
+          body .cart__main .cart__items .cart__item--quantity--mod button {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+            font-weight: 100; }
+      body .cart__main .cart__items .cart__item .ayuda {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.3rem; }
+      body .cart__main .cart__items .cart__item--price {
+        font-family: 'Roboto', sans-serif;
+        font-size: 5.2em;
+        font-weight: 100;
+        text-align: center;
+        width: 185px; }
+
+body .cart__price {
+  background-color: rgba(242, 240, 208, 0.6);
+  border-radius: 2rem; }
+  body .cart__price--subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3em;
+    font-weight: 300;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 1rem; }
+  body .cart__price--shipping {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3em;
+    font-weight: 300;
+    text-align: center;
+    gap: 2rem; }
+  body .cart__price--total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.2em;
+    font-weight: 300;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    background-color: rgba(242, 211, 53, 0.6);
+    border-radius: 0 0 2rem 2rem;
+    padding: 0.6rem; }
+
+@media screen and (max-width: 1023px) {
+  body .cart__body--low .shipping form input {
+    font-size: 1.5em; }
+  body .cart__body--low .shipping button {
+    font-size: 1.5em; }
+  body .cart__title h1 {
+    font-size: 8.5vw; }
+  body .cart__main .cart__items .cart__item .circle {
+    width: 130px;
+    height: 130px; }
+  body .cart__main .cart__items .cart__item--info {
+    padding-left: 1rem; }
+  body .cart__main .cart__items .cart__item--name {
+    font-size: 1.8em; }
+  body .cart__main .cart__items .cart__item--desc {
+    font-size: 1.4em;
+    width: 80%; }
+  body .cart__main .cart__items .cart__item--quantity {
+    padding: 1rem;
+    gap: 1rem; }
+    body .cart__main .cart__items .cart__item--quantity p {
+      font-size: 3.6em; }
+    body .cart__main .cart__items .cart__item--quantity--mod button.circle-bg {
+      width: 30px;
+      height: 30px;
+      font-size: 2.4em; }
+  body .cart__main .cart__items .cart__item--price {
+    font-size: 4em; }
+  body .cart__price--subtotal, body .cart__price--shipping {
+    font-size: 2em; }
+  body .cart__price--total {
+    font-size: 2.8em; } }
+
+@media screen and (max-width: 768px) {
+  body .cart__body--low .shipping form input {
+    font-size: 1.2em; }
+  body .cart__body--low .shipping button {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.02rem; }
+  body .cart__main {
+    margin: 0 2rem; }
+    body .cart__main .cart__items .cart__item .circle {
+      width: 115px;
+      height: 115px; }
+    body .cart__main .cart__items .cart__item--info {
+      padding-left: 0; }
+    body .cart__main .cart__items .cart__item--name {
+      font-size: 1.4em;
+      font-weight: 500;
+      margin-bottom: 1rem; }
+    body .cart__main .cart__items .cart__item--desc {
+      font-size: 1.2em;
+      width: 90%; }
+    body .cart__main .cart__items .cart__item--quantity {
+      padding: 0.5rem; }
+      body .cart__main .cart__items .cart__item--quantity p {
+        font-size: 3em; }
+      body .cart__main .cart__items .cart__item--quantity--mod button.circle-bg {
+        width: 25px;
+        height: 25px;
+        font-size: 2.4em; }
+    body .cart__main .cart__items .cart__item--price {
+      font-size: 3.2em;
+      width: 115px; }
+  body .cart__price--subtotal, body .cart__price--shipping {
+    font-size: 1.8em; }
+  body .cart__price--total {
+    font-size: 2em;
+    font-weight: 500;
+    padding: 1rem; } }
+
+@media screen and (max-width: 600px) {
+  body .cart__body--low {
+    margin: 4rem 0 9rem 0; }
+    body .cart__body--low .shipping {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem; }
+      body .cart__body--low .shipping form input {
+        font-size: 1.2em; }
+      body .cart__body--low .shipping button {
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: 0; }
+  body .cart__main .cart__items .cart__item .circle {
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    height: 80px; }
+  body .cart__main .cart__items .cart__item .item--xl img {
+    width: calc(55% + 30%); }
+  body .cart__main .cart__items .cart__item .item--l img {
+    width: calc(50% + 30%); }
+  body .cart__main .cart__items .cart__item .item--m img {
+    width: calc(45% + 30%); }
+  body .cart__main .cart__items .cart__item .item--s img {
+    width: calc(40% + 30%); }
+  body .cart__main .cart__items .cart__item--quantity {
+    gap: 0.5rem;
+    padding: 0.5rem; }
+    body .cart__main .cart__items .cart__item--quantity p {
+      font-size: 2.6em; }
+    body .cart__main .cart__items .cart__item--quantity--mod {
+      gap: 0.5rem; }
+  body .cart__main .cart__items .cart__item--price {
+    font-size: 2.6em;
+    width: 90px; }
+  body .cart__price--subtotal {
+    font-size: 1.6em; }
+  body .cart__price--shipping {
+    margin-top: 0.4rem;
+    font-size: 1.6em; }
+  body .cart__price--total {
+    margin-top: 0.5rem;
+    font-size: 1.8em; } }
+
+@media screen and (max-width: 480px) {
+  body .cart__body--low {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    gap: 1.5rem; }
+    body .cart__body--low .shipping {
+      width: 100%; }
+      body .cart__body--low .shipping form {
+        width: 100%; }
+        body .cart__body--low .shipping form input {
+          width: 100%;
+          font-size: 1.5em; }
+      body .cart__body--low .shipping button {
+        width: 100%;
+        font-size: 1.5em; }
+  body .cart__title h1 {
+    font-size: 10vw;
+    margin: 4rem 0; }
+  body .cart__main .cart__items .cart__item--desc {
+    width: 100%; }
+  body .cart__main .cart__items .cart__item--price {
+    font-size: 2.3em; }
+  body .cart__main .cart__items .cart__item--quantity--mod {
+    flex-direction: row; }
+  body .cart__main .cart__items .cart__item .ayuda {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem; }
+  body .cart__price {
+    width: 100%; }
+    body .cart__price--subtotal {
+      padding: 1rem 1rem 0 1rem; }
+    body .cart__price--shipping {
+      padding: 0 1rem 0 1rem; } }
