@@ -6,21 +6,19 @@ body .cart__link {
     border-radius: 50%;
     border: $secondary 0.2rem solid;
     height: 70px;
-
     color: $black;
     text-decoration: none;
     border-radius: 60px;
     display: inline-flex;
     align-items: center;
-    overflow:hidden;
+    overflow: hidden;
     width: auto;
-    max-width: 70px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+    max-width: 70px;
     -webkit-transition: max-width 0.7s;
     transition: max-width 0.7s;
     &:hover {
         max-width: 500px;
     }
-
 
     .text {
         @include primary-font(2.3em, $weight: light);
