@@ -5,46 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carpas para niños a medida, distintos tamaños y una gran personalización">
+    <meta name="keywords" content="carpas, tipi, tepee, niños, niñas, aire libre, a medida, artesanales, infancia">
     <title>Uñika | Tienda</title>
+    <link rel="shortcut icon" href="../img/icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/index.css" />
 </head>
 
 <body class="grid">
     <header>
-        <nav class="navbar flex-row container">
+        <nav class="navbar container">
             <div class="navbar__logo">
                 <a href="../../index.html"><img src="../img/icon/logo.png" alt="Logo de Uñika" /></a>
             </div>
-            <ul class="navbar__menu flex-row">
-                <li id="active" class="menu__item"><a class="menu__link" href="./store.html">Tienda</a></li>
+            <ul class="navbar__menu">
+                <li class="menu__item"><a class="menu__link--active" href="./store.html">Tienda</a></li>
                 <li class="menu__item"><a class="menu__link" href="./about.html">Nosotros</a></li>
                 <li class="menu__item"><a class="menu__link" href="./contact-us.html">Contacto</a></li>
                 <!-- no se incluye cart.html -->
                 <li class="menu__item"><a class="menu__link" id="cart" href="./cart.html">
-                        <img src="../img/icon/cart.png" /> Mi Carro</a>
+                        <img src="../img/icon/cart.png" alt="Icono de carrito de compras" /> Mi Carro</a>
                 </li>
                 <li class="menu__item">
-                    <a href="" id="hamburger__icon" class="flex-row"><img src="../img/icon/hamburger.png"
-                            alt="Hamburger icon"></a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu__item">
-                            <a href="./assets/pages/store.html" class="sub-menu__link flex-column">Tienda</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="./assets/pages/about.html" class="sub-menu__link flex-column">Nosotros</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="./assets/pages/contact-us.html" class="sub-menu__link flex-column">Contacto</a>
-                        </li>
-                    </ul>
+                    <input type="checkbox" id="sub-menu--toggler">
+                    <div class="hamburger__icon">
+                        <div></div>
+                    </div>
+                    <div class="hamburger__menu">
+                        <div>
+                            <ul>
+                                <li><a href="./store.html" class="sub-menu__link">Tienda</a></li>
+                                <li><a href="./about.html" class="sub-menu__link">Nosotros</a></li>
+                                <li><a href="./contact-us.html" class="sub-menu__link">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <div class="store__main flex-column">
+    <div class="store__main">
         <div>
-            <h1><strong>Uñika</strong>mente a tu medida</h1>
+            <h1 class="expandir-texto"><strong>Uñika</strong>mente a tu medida</h1>
         </div>
         <div class="store__video">
             <video autoplay muted loop>
@@ -56,8 +60,8 @@
     <div class="store__products">
         <div class="product">
             <hr>
-            <p class="product__title">Carpa pequeña</p>
-            <p>1m de base y 1.55m de alto. Incluye alfombra, almohadones y bolsillos.</p>
+            <h2 class="product__title">Carpa pequeña</h2>
+            <p>1m de base y 1.55m de alto. Incluye alfombra, almohadon y bolsillo.</p>
             <picture>
                 <source media="(max-width: 480px)" srcset="../img/store_images/carpa1m.jpg 480w">
                 <source media="(max-width: 600px)" srcset="../img/store_images/carpa1m.jpg 800w">
@@ -66,13 +70,12 @@
                 <source media="(min-width: 1400px)" srcset="../img/store_images/carpa1m.jpg">
                 <img src="../img/store_images/carpa1m.jpg" alt="Carpa de 1m x 1m y 1.7m de altura">
             </picture>
-            <button class="flex-row" type="button"><img src="../img/icon/add-to-cart.png">COMPRAR</button>
+            <button type="button"><img src="../img/icon/add-to-cart.png" alt="Icono de agregar al carrito de compras.">COMPRAR</button>
         </div>
         <div class="product">
             <hr>
-            <p class="product__title">Carpa mediana</p>
-            <p>1.2m de base y 1.7m de alto.
-                Incluye alfombra, almohadones y bolsillos.</p>
+            <h2 class="product__title">Carpa mediana</h2>
+            <p>1.2m de base y 1.7m de alto. Incluye alfombra, almohadon y bolsillo.</p>
             <picture>
                 <source media="(max-width: 480px)" srcset="../img/store_images/carpa1.2m.jpg 480w">
                 <source media="(max-width: 600px)" srcset="../img/store_images/carpa1.2m.jpg 800w">
@@ -81,13 +84,12 @@
                 <source media="(min-width: 1400px)" srcset="../img/store_images/carpa1.2m.jpg">
                 <img src="../img/store_images/carpa1.2m.jpg" alt="Carpa de 1.2m x 1.2m y 1.7m de altura">
             </picture>
-            <button class="flex-row" type="button"><img src="../img/icon/add-to-cart.png">COMPRAR</button>
+            <button type="button"><img src="../img/icon/add-to-cart.png" alt="Icono de agregar al carrito de compras.">COMPRAR</button>
         </div>
         <div class="product">
             <hr>
-            <p class="product__title">Carpa grande</p>
-            <p>1.5m de base y 1.7m de alto.
-                Incluye alfombra, almohadones y bolsillos.</p>
+            <h2 class="product__title">Carpa grande</h2>
+            <p>1.5m de base y 1.7m de alto. Incluye alfombra, almohadon y bolsillo.</p>
             <picture>
                 <source media="(max-width: 480px)" srcset="../img/store_images/carpa1.5m.jpg 480w">
                 <source media="(max-width: 600px)" srcset="../img/store_images/carpa1.5m.jpg 800w">
@@ -96,13 +98,12 @@
                 <source media="(min-width: 1400px)" srcset="../img/store_images/carpa1.5m.jpg">
                 <img src="../img/store_images/carpa1.5m.jpg" alt="Carpa de 1.5m x 1.5m y 1.7m de altura">
             </picture>
-            <button class="flex-row" type="button"><img src="../img/icon/add-to-cart.png">COMPRAR</button>
+            <button type="button"><img src="../img/icon/add-to-cart.png" alt="Icono de agregar al carrito de compras.">COMPRAR</button>
         </div>
         <div class="product">
             <hr>
-            <p class="product__title">Carpa extra-grande</p>
-            <p>2m de base y 1.85m de alto.
-                Incluye alfombra, almohadones y bolsillos.</p>
+            <h2 class="product__title">Carpa extra-grande</h2>
+            <p>2m de base y 1.85m de alto. Incluye alfombra, almohadon y bolsillo.</p>
             <picture>
                 <source media="(max-width: 480px)" srcset="../img/store_images/carpa2m.jpg 480w">
                 <source media="(max-width: 600px)" srcset="../img/store_images/carpa2m.jpg 800w">
@@ -111,23 +112,28 @@
                 <source media="(min-width: 1400px)" srcset="../img/store_images/carpa2m.jpg">
                 <img src="../img/store_images/carpa2m.jpg" alt="Carpa de 2m x 2m y 1.8m de altura">
             </picture>
-            <button class="flex-row" type="button"><img src="../img/icon/add-to-cart.png">COMPRAR</button>
+            <button type="button"><img src="../img/icon/add-to-cart.png" alt="Icono de agregar al carrito de compras.">COMPRAR</button>
         </div>
     </div>
 
+    <a class="cart__link" href="./cart.html">
+        <span class="icon"><img src="../img/icon/cart.png" alt="Ir al carrito de compras."></span>
+        <span class="text">Ir al carrito</span>
+    </a>
+
     <footer>
-        <div class="footer flex-row">
+        <div class="footer">
             <div class="faq__links">
                 <a href="./about.html">¿Quienes somos?</a>
                 <a href="./faq.html">Preguntas Frecuentes</a>
             </div>
             <div class="socialMedia__links">
                 <a href="https://www.instagram.com/unikaabrigos" target="_blank"><img src="../img/icon/ig-logo.png"
-                        alt="Instagram" /></a>
+                        alt="Logo de Instagram" /></a>
                 <a href="https://www.facebook.com/unikaabrigos" target="_blank"><img src="../img/icon/fb-logo.png"
-                        alt="Facebook" /></a>
+                        alt="Logo de Facebook" /></a>
                 <a href="https://www.whatsapp.com/" target="_blank"><img src="../img/icon/wa-logo.png"
-                        alt="WhatsApp" /></a>
+                        alt="Logo de WhatsApp" /></a>
             </div>
             <div class="copyright">
                 <p>© Uñika 2022</p>

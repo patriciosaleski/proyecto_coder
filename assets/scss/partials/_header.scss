@@ -1,0 +1,194 @@
+// Propiedades para Header/Navbar
+
+header {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    align-items: center;
+    background-color: $primary;
+    box-shadow: 0px 22px 87px 1px rgba(0,0,0,0.3);
+
+    .navbar {
+        @include flex(row, space-between);
+        min-height: 5vh;
+
+        &__logo {
+            margin-left: 1vw;
+
+            img {
+                width: 130px;
+            }
+        }
+
+        &__menu {
+            @include flex(row);
+    
+            .menu__item {
+                margin: 0 0.5rem;
+
+                #sub-menu--toggler {
+                    display: none;
+                    z-index:2;
+                    height: 50px;
+                    width: 40px;
+                    cursor: pointer;
+                    opacity: 0;
+                    position: sticky;
+                }
+
+                .hamburger__icon {
+                    display: none;
+                    position: absolute;
+                    height: 40px;
+                    width: 40px;
+                    padding: 0.5rem;
+                    top: 28px;
+
+                    div {
+                        position: relative;
+                        background: $black;
+                        height: 4px;
+                        width: 100%;
+                        transition: all  0.4s ease;
+
+                        &::after, &::before {
+                            content: '';
+                            position: absolute;
+                            top: -10px;
+                            background: $black;
+                            width: 100%;
+                            height: 4px;
+                            transition: all  0.4s ease;
+                        }
+
+                        &::after {
+                            top: 10px;
+                        }
+                    }
+                }
+
+                .hamburger__menu {
+                    z-index: 2;
+                    display: none;
+                    position: absolute;
+                    right: 2vw;
+                }
+
+                #sub-menu--toggler:checked ~ .hamburger__menu {
+                        @include flex(column);
+                        position: absolute;
+                        
+                        ul {
+                            background: $primary;
+                            box-shadow: -10px 8px 15px rgba(0,0,0,0.2),
+                                        10px 8px 15px rgba(0,0,0,0.2);
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .sub-menu__link {
+                            @include flex(column);
+                            @include primary-font(1.8em, $weight: light, $align: center);
+                            padding: 1rem 2rem;
+
+                            &:hover {
+                                background-color: $secondary;
+                                transition: background-color .2s ease-in-out;
+                            }
+                        }
+                        
+                }
+
+                #sub-menu--toggler:checked + .hamburger__icon {
+                    div {
+                        background: rgba(0,0,0,0);
+
+                        &::before {
+                            top: 0;
+                            transform: rotate(45deg);
+                            background: black;
+                        }
+
+                        &::after {
+                            top: 0;
+                            transform: rotate(135deg);
+                            background: black;
+                        }
+                    }
+                }
+
+                .menu__link {
+                    @include primary-font(2.4em, $weight: light);
+                    padding: 0.5rem 1.5rem;
+                    background-color: $tertiary;
+                    border: 0.05em solid $black;
+                    border-radius: 1rem;
+
+                    &--active {
+                        @extend .menu__link;
+                        background-color: $primary;
+                        border: $secondary 0.2rem solid;
+                    }
+
+                    img {
+                        height: 3.2rem;
+                        width: 3.2rem;
+                        margin-right: 1rem;
+                    }
+    
+                    &:hover {
+                        background-color: $primary;
+                        font-weight: 400;
+                        border-color: $secondary;
+                        border-radius: 2rem;
+                        transition: border-radius .3s ease-in-out,
+                                    background-color .3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        #cart {
+            @include flex();
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header .navbar {
+        max-width: 1200px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    header .navbar {
+        max-width: 768px;
+
+        .navbar__menu .menu__item {
+            .menu__link {
+                font-size: 1.6em;
+                padding: 0.2rem 0.7rem;
+            }
+    
+            #cart {
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        .navbar__menu .menu__item {
+            .menu__link, #cart {
+                display: none; 
+            }
+
+            #sub-menu--toggler, .hamburger__icon {
+                display: block;
+            }
+        }
+    }
+}

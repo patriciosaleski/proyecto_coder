@@ -1,0 +1,202 @@
+// Comienzo de propiedades para contact-us.html
+// contact__form
+
+body {
+    .contact-us {
+        &__title {
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+
+            h1 {
+                @include primary-font(7vw, $weight: thin);
+                margin: 7vh auto 3vh 5vw;
+            }
+        }
+
+        &__main {
+            grid-column: 1 / 3;
+            grid-row: 3 / 5;
+            margin: 5vh 7vw;
+
+            .contact__form {
+                form {@include flex(column, $align:flex-start);}
+
+                input {
+                    @include primary-font(1.8em);
+                    @include btn(2rem, 40vw, $useHover: false);
+                    padding-left: 1rem;
+                    margin-bottom: 4vh;
+                    min-height: 3.2rem;
+                }
+                
+                label {
+                    @include primary-font(1.8em);
+                    margin-bottom: 0.8vh;
+                }
+
+                textarea {
+                    @include btn(2rem, 40vw, $useHover: false);
+                    @include primary-font(1.6em);
+                    margin-bottom: 4vh;
+                    padding-left: 0.5rem;
+                    min-height: 8rem;
+                    resize: vertical;
+                }
+
+                button {
+                    @include btn(3.6rem, $useHover: false);
+                    @include hover--fade();
+                    @include primary-font(2.4em, $ls: -0.03em);
+                    margin: 0 0 8vh 2vw;
+                    padding: 0 1.4vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        .contact-us {
+            &__main {
+                .contact__form {
+                    input, label {
+                        font-size: 1.8vw;
+                    }
+    
+                    textarea {
+                        margin-bottom: 4vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .contact-us {
+            &__title h1 {
+                margin-bottom: 0;
+            }
+
+            &__main {
+                grid-column: 1 / 5;
+                grid-row: 3 / 5;
+                margin-top: 0;
+
+                .contact__form {
+                    input, textarea {
+                        width: 60vw;
+                        transition: width .2s;
+                        margin-bottom: 2vh;
+                    }
+    
+                    button {
+                        @include btn(3.6rem, 15vw, $useHover: false);
+                        @include primary-font(3vw, $weight: semi);
+                        margin: 0 0 8vh 2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body { 
+        .contact-us {
+            &__title h1 {
+                @include primary-font(8vw, $weight: light);
+            }
+
+            &__main {
+                margin-bottom: 5rem;
+
+                .contact__form {
+                    input, label {
+                        font-size: 3.6vw;
+                    }
+    
+                    input, textarea {
+                        width: 86vw;
+                        margin-bottom: 2vh;
+                    }
+    
+                    button {
+                        @include btn(3.2rem, 24vw, $useHover: false);
+                        @include primary-font(5vw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* comienzo de propiedades para faq__link */
+
+body .faq__link {
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+
+    a {
+        @include flex();
+        @include primary-font(1.9vw, $weight: light);
+        background-color: $secondary;
+        border: $tertiary 0.2rem solid;
+        border-radius: 1rem;
+        padding: 2vh 1vw;
+        width: fit-content;
+
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            background-color: $primary;
+            transition: background-color .2s ease-in-out;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body .faq__link {
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
+        @include flex();
+        margin: 0 auto 0 15vw;
+
+        a {
+            font-size: 3vw;
+        }
+    }
+
+    html:not(.no-js) [data-aos^="fade"][data-aos^="fade"] {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    [data-aos] {
+        pointer-events: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body .faq__link {
+        @include push--auto;
+
+        a {
+            font-size: 4.5vw;
+            width: 60vw;
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+                margin: 0 1.7vw 0 1.7vw;
+            }
+        }
+    }
+}

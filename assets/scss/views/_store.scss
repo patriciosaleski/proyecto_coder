@@ -1,0 +1,160 @@
+// Comienzo de propiedades para store.html
+// store_main
+
+body .store__main {
+    grid-column: 1 / 5;
+    align-items: center;
+    align-content: center;
+    margin: 7vh auto;
+
+    h1 {
+        @include primary-font(7vw, $weight: thin);
+        margin-bottom: 3vh;
+
+        strong {
+            font-weight: map-get($font--weight, light);
+        }
+    }
+
+    .store__video {
+        width: fit-content;
+        @include push--auto;
+    }
+
+    video {
+        border: $secondary 0.2rem solid;
+        border-radius: 3rem;
+        width: fit-content;
+    }
+}
+
+
+// store__products
+
+body .store__products {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    margin: 3vh auto;
+    margin-bottom: 17vh;
+
+    .product {
+        width: 16.24vw;
+
+        p {
+            font-size: 0.9vw;
+            margin-bottom: 2rem;
+        }
+
+        picture img {
+            width: 16.24vw;
+        }
+
+        button {
+            @include flex($justify: space-evenly);
+            @include btn(2.4vw, 11vw);
+            @include primary-font(1.5vw, $weight: light);
+            margin-left: 0.5vw;
+            margin-top: 1vh;
+
+            img {
+                width: 1.3vw;
+                height: 1.3vw;
+            }
+        } 
+
+        &__title {
+            @include primary-font(1.4vw, $weight: semi);
+            margin-bottom: 0.5vh;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        .store__main {
+            h1 {
+                font-size:  9vw;
+            }
+        }
+
+        .store__products {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5vw;
+            margin: 6vh auto;
+
+            .product {
+                width: 34vw;
+                p {
+                    font-size: 1.8vw;
+                }
+
+                &__title {
+                    font-size: 3vw;
+                }
+
+                picture img {
+                    width: 34vw;
+                }
+
+                button {
+                    @include btn(3.3vw, 15vw);
+                    font-size: 2.2vw;
+                    padding: 0.5rem 0.8rem;
+
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body .store__video video {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        .store__main h1 {
+            font-size: 9vw;
+        }
+
+        .store__products {
+            grid-template-columns: 1fr;
+            margin: 6vh auto;
+
+            .product {
+                width: 68vw;
+
+                picture img {
+                    width: 68vw;
+                }
+
+                p {
+                    font-size: 3.5vw;
+                }
+
+                &__title {
+                    font-size: 6vw;
+                }
+
+                button {
+                    @include btn(5vw, 25vw);
+                    font-size: 3.5vw;
+                    padding: 1.4rem;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

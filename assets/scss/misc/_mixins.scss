@@ -1,0 +1,148 @@
+// Mixins
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    align-items: center;
+}
+
+@mixin grids($col: 0, $row: 0, $rsize: 1fr, $justify-c: start, $align-c: center, $rgap: 0) {
+    display: grid;
+    grid-template-columns: repeat($col, auto);
+    grid-template-rows: repeat($row, $rsize);
+    justify-content: $justify-c;
+    align-content: $align-c;
+    row-gap: $rgap;
+}
+
+@mixin flex ($direction: row, $justify: flex-start, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+$item__size: (
+    "xl": 55%,
+    "l": 50%,
+    "m": 45%,
+    "s": 40%
+);
+
+.circle {
+    @include flex($justify:center);
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: black 0.2rem solid;
+    border-radius: 50%;
+}
+
+@each $name, $size in $item__size {
+    .item--#{$name} {
+        img {
+            width: $size;
+        }
+    }
+}
+
+.circle-bg {
+    @include flex($justify:center);
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+
+    &:hover {
+        background-color: $primary;
+        transition: background-color 0.2s ease-in-out;
+    }
+}
+
+@mixin btn ($btn-height, $btn-width: fit-content, $btn-color: $primary, 
+            $btn-border: $secondary, $useHover: true) {
+    background-color: $btn-color;
+    border: $btn-border 0.2rem solid;
+    border-radius: calc(#{$btn-height}/2);
+    height: $btn-height;
+    width: $btn-width;
+
+    @if $useHover {
+        &:hover {
+            background-color: $btn-border;
+            border: $btn-color 0.2rem solid;
+            transition: background-color .3s ease-in-out, border .3s ease-in-out;
+        }
+    }
+}
+
+@mixin hover--fade () {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, $primary 50%, $secondary 50%);
+    transition: background-position .4s;
+
+    &:hover {
+        border: $tertiary 0.2rem solid;
+        background-position: -100% 0;
+    }
+}
+
+@mixin container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+$font--weight: (
+    thin: 100,
+    light: 300,
+    semi: 500,
+    bold: 700
+);
+
+
+@mixin primary-font ($size: false, $color: false, $weight: false, 
+                    $align:false, $lh: false, $ls: false) {
+    font-family: 'Roboto', sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: map-get($font--weight, $weight); }
+    @if $align { text-align: $align; }
+    @if $lh { line-height: $lh; }
+    @if $ls { letter-spacing: -0.03em; }
+}
+
+.grid {
+    @include grid;
+}
+
+.container {
+    @include container;
+}
+
+/* Animations */
+
+.expandir-texto {
+	animation: expandir-texto 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+@keyframes expandir-texto {
+    0% {
+        letter-spacing: -0.6em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

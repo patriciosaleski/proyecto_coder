@@ -66,6 +66,26 @@ body {
 }
 
 
+/* Animations */
+
+.expandir-texto {
+	animation: expandir-texto 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+@keyframes expandir-texto {
+    0% {
+        letter-spacing: -0.6em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* Helpers */
 
 .grid {
@@ -585,7 +605,7 @@ body .product__features {
     margin-bottom: 17vh;
 }
 
-body .product__features p {
+body .product__feature p {
     font-size: 2vw;
     font-weight: var(--semi);
     margin-bottom: 2rem;
@@ -654,8 +674,8 @@ body .store__video video {
     width: fit-content;
 }
 
-
 /* comienzo de propiedades para store__products */
+
 
 body .store__products {
     grid-column: 2 / 4;
@@ -750,7 +770,7 @@ body .product button:hover {
         width: 2vw;
         height: 2vw;
     }
-} 
+}
 
 @media screen and (max-width: 768px) {
     body .store__video video {
@@ -922,8 +942,6 @@ body .contact__form button:hover {
     color: #000000;
 }
 
-
-
 @media screen and (max-width: 1023px) {
     body .contact__form input, label {
         font-size: 1.8vw;
@@ -1054,7 +1072,7 @@ body .faq__link a:hover {
 /* -------------- comienzo de propiedades para faq.html -------------- */
 /* comienzo de propiedades para faq */
 
-body main.faq li {
+body main.faq .faq__list li {
     list-style-image: url(../img/icon/dot.png);
     margin-bottom: 5rem;
 }
@@ -1098,8 +1116,8 @@ body main.faq ul li p {
     }
 }
 
-/* comienzo de propiedades para support__link y support__button */
 
+/* comienzo de propiedades para support__link y support__button */
 
 body .support__link h2 {
     font-family: var(--robotoMono);
@@ -1159,19 +1177,9 @@ body div.support__link div.support__button button:hover {
 }
 
 @media screen and (max-width: 991px) {
-    body div.container-lg {
-        margin: 0 3rem;
-    }
-
     body div.support__button, div.support__link h2 {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body div.container-lg {
-        margin-left: 1rem;
     }
 }
 
