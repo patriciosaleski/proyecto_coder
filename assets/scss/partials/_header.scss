@@ -11,6 +11,14 @@ header {
         @include flex(row, space-between);
         min-height: 5vh;
 
+        &__logo {
+            margin-left: 1vw;
+
+            img {
+                width: 130px;
+            }
+        }
+
         &__menu {
             @include flex(row);
     

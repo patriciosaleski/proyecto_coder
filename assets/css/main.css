@@ -172,6 +172,10 @@ header {
     justify-content: space-between;
     align-items: center;
     min-height: 5vh; }
+    header .navbar__logo {
+      margin-left: 1vw; }
+      header .navbar__logo img {
+        width: 130px; }
     header .navbar__menu {
       display: flex;
       flex-direction: row;
@@ -312,7 +316,6 @@ body .cart__link {
   overflow: hidden;
   width: auto;
   max-width: 70px;
-  /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
   -webkit-transition: max-width 0.7s;
   transition: max-width 0.7s; }
   body .cart__link:hover {
@@ -478,19 +481,21 @@ body .contact-us__main {
     font-family: 'Roboto', sans-serif;
     font-size: 8vw;
     font-weight: 300; }
-  body .contact-us__main .contact__form input, body .contact-us__main .contact__form label {
-    font-size: 3.6vw; }
-  body .contact-us__main .contact__form input, body .contact-us__main .contact__form textarea {
-    width: 86vw;
-    margin-bottom: 2vh; }
-  body .contact-us__main .contact__form button {
-    background-color: #F2F0D0;
-    border: #F2A516 0.2rem solid;
-    border-radius: calc(3.2rem/2);
-    height: 3.2rem;
-    width: 24vw;
-    font-family: 'Roboto', sans-serif;
-    font-size: 5vw; } }
+  body .contact-us__main {
+    margin-bottom: 5rem; }
+    body .contact-us__main .contact__form input, body .contact-us__main .contact__form label {
+      font-size: 3.6vw; }
+    body .contact-us__main .contact__form input, body .contact-us__main .contact__form textarea {
+      width: 86vw;
+      margin-bottom: 2vh; }
+    body .contact-us__main .contact__form button {
+      background-color: #F2F0D0;
+      border: #F2A516 0.2rem solid;
+      border-radius: calc(3.2rem/2);
+      height: 3.2rem;
+      width: 24vw;
+      font-family: 'Roboto', sans-serif;
+      font-size: 5vw; } }
 
 /* comienzo de propiedades para faq__link */
 body .faq__link {
