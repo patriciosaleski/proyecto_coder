@@ -16,6 +16,8 @@ body .cart__link {
     max-width: 70px;
     -webkit-transition: max-width 0.7s;
     transition: max-width 0.7s;
+    cursor: pointer;
+    
     &:hover {
         max-width: 500px;
     }
